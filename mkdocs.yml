@@ -1,0 +1,77 @@
+site_name: Bliss OS Documentation
+repo_name: BlissOS/Documentation
+repo_url: https://github.com/BlissRoms-x86/Documentation
+theme:
+  name: material
+  favicon: assets/favicon.png
+  custom_dir: assets_main
+  palette:
+    primary: custom
+    scheme: slate
+  font:
+    text: Noto Sans
+    code: Noto Sans Mono
+  icon:
+    logo: material/library
+    logo: blissos
+  features:
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+extra_css:
+  - assets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+extra:
+  social:
+    - icon: octicons/globe-16
+      link: https://blissos.org/
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/blissos_org
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/blissx86
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/F9n5gbdNy2
+copyright:  Copyright © 2013 - 2024 BlissLabs
+nav:
+  - Main Page: README.md
+  - Frequently Asked Questions (FAQs): faq.md
+  - Installation:
+    - installation/README.md
+    - Automatic with Installers: 
+      - Bootable Installer: installation/auto/bootable-installer.md
+      - Windows Installer: installation/auto/windows-installer.md
+    - Manual Setup:
+      - The basics: installation/manual/the-basics.md
+      - Setup Linux's Grub2: installation/manual/setup-linux-grub2.md
+      - Setup rEFInd: installation/manual/setup-refind.md
+    - Install on a Virtual Machine: installation/vm.md
+  - Configuration:
+    - configuration/README.md
+    - Configuration Through Command Line Parameters: configuration/Configuration-through-Command-Line-Parameters.md
+    - Calibrate and configure iptsd: configuration/Calibrate-and-configure-iptsd.md
+  - Knowledgebase: 
+    - knowledgebase/README.md
+    - Hardware Requirements: knowledgebase/hardware-requirement.md
+    - Different BlissOS variants:
+      - knowledgebase/other-bliss-variant/README.md
+      - BlissOS Go: knowledgebase/other-bliss-variant/go-builds.md
+      - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
+      - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
+    - Preparing a Virtual Machine: knowledgebase/vm-setup.md
+    - Compatibility List: knowledgebase/compatibility-list.md
+  - Development: 
+    - development/README.md
+    - Maintaining Proper Authorship: development/maintaining-proper-authorship.md
+    - Obtain the Source Code: development/obatain-source-and-build.md
+    - Porting Linux Drivers: development/porting-linux-drivers.md
+  - Feedback:
+    - feedback/README.md
+    - Github Issues: feedback/github-issue.md
+    - Messaging Platforms: feedback/messaging.md
+    - XDA Threads: feedback/xda.md
+  - Code of Conduct: CODE_OF_CONDUCT.md
