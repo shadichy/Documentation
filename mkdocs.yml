@@ -40,7 +40,7 @@ copyright:  Copyright © 2013 - 2024 BlissLabs
 nav:
   - Main Page: README.md
   - Frequently Asked Questions (FAQs): faq.md
-  - Installation:
+  - Installation guide:
     - installation/README.md
     - Automatic with Installers: 
       - Bootable Installer: installation/auto/bootable-installer.md

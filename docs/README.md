@@ -18,9 +18,9 @@ We've been doing this since Android 7.1 and still actively working on the OS.
 
 To start, first you need to know about the [hardware requirement](knowledgebase/hardware-requirement.md) to be able to run the OS. 
 
-Once you know that your hardware is capable of running BlissOS, head over to the [installation](Installation) section to choose the installation method of your choice to handle. For starter, installation media is our choice to install BlissOS.
+Once you know that your hardware is capable of running BlissOS, head over to the [installation](installation) section to choose the installation method of your choice to handle. For starter, installation media is our choice to install BlissOS.
 
 If you see the main sites have many different variants (Generic, Surface, Go, Zenith) and wonder which one should you choose, check out [this page](knowledgebase/other-bliss-variant) and choose the variant you want to know.
 
-You may have some questions and some of them might be on the [FAQs](knowledgebase/faq.md).
+You may have some questions and some of them might be on the [FAQs](faq).
 
