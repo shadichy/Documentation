@@ -44,3 +44,13 @@ Once done, you now have an bootable BlissOS drive
 
     BlissOS doesn't support secure boot, if you are on UEFI and your secure boot is on, please disable it to be able to continue the installation !
 
+Access the boot menu on your device, choose to boot the BlissOS drive. You'll see the boot loader menu appear:
+
+| On UEFI, BlissOS uses Grub2    | On Legacy BIOS, BlissOS uses syslinux       |
+|:-----------------------:|:-----------------------:|
+| ![](../../../assets/menu_uefi.png) | ![](../../../assets/menu_bios.png)|
+
+Choose the Installation option, you will be booted into the bootable installer.
+
+## **[UEFI only]** choosing the EFI System Partition
+

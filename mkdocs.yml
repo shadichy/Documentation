@@ -14,6 +14,7 @@ theme:
   icon:
     logo: material/library
     logo: blissos
+    annotation: material/plus-circle
   features:
     - navigation.indexes
     - navigation.top
@@ -26,6 +27,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
 extra:
   social:
     - icon: octicons/globe-16
