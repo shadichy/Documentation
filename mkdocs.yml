@@ -66,7 +66,11 @@ nav:
       - BlissOS Go: knowledgebase/other-bliss-variant/go-builds.md
       - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
       - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
-    - Preparing a Virtual Machine: knowledgebase/vm-setup.md
+    - Preparing a Virtual Machine:
+      - knowledgebase/vm-setup/README.md
+      - QEMU: knowledgebase/vm-setup/qemu.md
+      - VirtualBox: knowledgebase/vm-setup/virtbox.md
+      - VMware: knowledgebase/vm-setup/vmware.md
     - Compatibility List: knowledgebase/compatibility-list.md
   - Development: 
     - development/README.md

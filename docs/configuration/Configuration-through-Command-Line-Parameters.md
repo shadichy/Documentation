@@ -277,8 +277,8 @@ Example:
 no_console_suspend
 ```
 
-* `SUSPEND_TYPE`: Set suspend type. options: mem, disk, freeze mem, freeze disk
-* `PWR_OFF_DBLCLK`: Set power off double click. options: true,false
+* `SUSPEND_TYPE`: Set suspend type. Options: mem, disk, freeze mem, freeze disk
+* `PWR_OFF_DBLCLK`: Set power off double click. Options: true,false
 * `SLEEP_STATE`: Override default sleep.state property for the device
 
 
@@ -315,10 +315,10 @@ INTEL_PSTATE_STATUS=passive
 
 (Available through Android-Generic Add-On & add-ons for Bass builds)
 
-* `SET_SCREEN_OFF_TIMEOUT`: Set screen off timeout. options: integer in milliseconds
-* `SET_SLEEP_TIMEOUT`: Set screen sleep timeout. options: integer in milliseconds
-* `SET_POWER_ALWAYS_ON`: Set power always on. options: true or false
-* `SET_STAY_ON_WHILE_PLUGGED_IN`: Set stay on while plugged in. options: true or false
+* `SET_SCREEN_OFF_TIMEOUT`: Set screen off timeout. Options: integer in milliseconds
+* `SET_SLEEP_TIMEOUT`: Set screen sleep timeout. Options: integer in milliseconds
+* `SET_POWER_ALWAYS_ON`: Set power always on. Options: true or false
+* `SET_STAY_ON_WHILE_PLUGGED_IN`: Set stay on while plugged in. Options: true or false
 
 #### Generic Performance Options:
 
@@ -498,8 +498,8 @@ INTEL_PSTATE_STATUS=passive
 
 *   `USE_LAUNCHER3`: Forces Launcher3 to be set instead of secondary launcher in build
 *   `SET_SMARTDOCK_DEFAULT`: Set's SmartDock as default launcher when booting into Desktop specific builds (requires a build with SmartDock included by default)
-*   `ENABLE_QUICKSTEP_TASKBAR`: Set quickstep taskbar features to enabled (requires dev-options to be enabled & Launcher3 to also be enabled). options: true,false
-*   `FORCE_DESKTOP_ON_EXTERNAL`: Enable desktop mode on external display (required for MultiDisplay Input). options: 0,1
+*   `ENABLE_QUICKSTEP_TASKBAR`: Set quickstep taskbar features to enabled (requires dev-options to be enabled & Launcher3 to also be enabled). Options: true,false
+*   `FORCE_DESKTOP_ON_EXTERNAL`: Enable desktop mode on external display (required for MultiDisplay Input). Options: 0,1
 
 #### Navigation & Input Options:
 
@@ -603,10 +603,10 @@ We ship recent builds with two Bluetooth HAL's and it defaults to the newest one
 (Below items are available through Android-Generic Add-On & add-ons for Bass)
 
 Enable/Disable Wireless Devices (Change included only in specialized builds):
-* `LOCKDOWN_WIRELESS_DEVICES`: A kernel level switch to disable all wireless devices. options: 0,1
-* `UNLOCKDOWN_WIRELESS_DEVICES`: A kernel level switch to enable all disabled wireless devices. options: 0,1
+* `LOCKDOWN_WIRELESS_DEVICES`: A kernel level switch to disable all wireless devices. Options: 0,1
+* `UNLOCKDOWN_WIRELESS_DEVICES`: A kernel level switch to enable all disabled wireless devices. Options: 0,1
 
 Other Networking Options (Available in Bass builds):
-* `FORCE_DISABLE_ALL_RADIOS`: Set force disable all radios (only disables on boot, user can re-enable manually if given access). options: 0,1
-* `FORCE_BLUETOOTH_SERVICE`: Set force bluetooth service state. options: enable, disable
+* `FORCE_DISABLE_ALL_RADIOS`: Set force disable all radios (only disables on boot, user can re-enable manually if given access). Options: 0,1
+* `FORCE_BLUETOOTH_SERVICE`: Set force bluetooth service state. Options: enable, disable
 

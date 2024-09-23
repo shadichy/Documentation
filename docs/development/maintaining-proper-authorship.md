@@ -4,7 +4,7 @@ One of the most important things you need to keep in mind while working on open-
 
 ### What is "kanging"?
 
-[Kanging](https://www.urbandictionary.com/define.php?term=kanged) is a term used in the Android development community for the action of passing off someone else's code as one's own, intentionally or unintentionally.
+[Kanging][Kanging] is a term used in the Android development community for the action of passing off someone else's code as one's own, intentionally or unintentionally.
 
 ### Why is kanging bad?
 
@@ -30,7 +30,7 @@ The process is fairly simple yet important to understand.
 
 If you are cherry-picking commits, the authorship information is transferred automatically. Provided that you are running `git cherry-pick`, the entire commit information, down to when the commit was created, is picked into your repository. You don't have to do anything in this case.
 
-If you are committing someone else's code yourself, then you must manually specify who the author is. There are a lot of reasons why you would do this, from merge issues to incompatible code with the existing codebase. To manually specify an author, follow the [Manually specifying an author section below](#manually-specifying-an-author).
+If you are committing someone else's code yourself, then you must manually specify who the author is. There are a lot of reasons why you would do this, from merge issues to incompatible code with the existing codebase. To manually specify an author, follow the [Manually specifying an author section below][Manually specifying an author section below].
 
 Finally, do NOT squash a range of commits that are not your own. This completely wipes authorship information from the range of commits and causes a massive headache for other developers.
 
@@ -40,7 +40,7 @@ You need to first determine the original author's name and email address.
 
 GitHub no longer shows the author information when you mouse over the profile picture, which is quite unfortunate. However, there is an easy workaround.
 
-Go to the commit that you want to pick. \[[https://github.com/BlissRoms/Documentation-release/commit/5ae1c6c4441786cd3ad5bd1773c831ba13cd86bc](https://github.com/BlissRoms/Documentation-release/commit/5ae1c6c4441786cd3ad5bd1773c831ba13cd86bc) We'll use my commit as an example.\]
+Go to the commit that you want to pick. \[[https://github.com/BlissRoms/Documentation-release/commit/5ae1c6c4441786cd3ad5bd1773c831ba13cd86bc][https://github.com/BlissRoms/Documentation-release/commit/5ae1c6c4441786cd3ad5bd1773c831ba13cd86bc] We'll use my commit as an example.\]
 
 Add the word `.patch`, with the period, to the end of the URL and press Enter to navigate to the raw patch.
 
@@ -62,3 +62,6 @@ git commit --author="Eric Park "
 
 Once done, push to GitHub or Gerrit.
 
+[Kanging]: https://www.urbandictionary.com/define.php?term=kanged
+[Manually specifying an author section below]: #manually-specifying-an-author
+[https://github.com/BlissRoms/Documentation-release/commit/5ae1c6c4441786cd3ad5bd1773c831ba13cd86bc]: https://github.com/BlissRoms/Documentation-release/commit/5ae1c6c4441786cd3ad5bd1773c831ba13cd86bc
