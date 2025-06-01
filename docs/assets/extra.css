@@ -3,10 +3,12 @@
   --md-primary-bg-color:        #18001a;
   --md-typeset-a-color:         #18001a;
   --md-default-bg-color:        #f7eef2;
+  --md-accent-fg-color:         #e9c6f0;
 }
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:        #18001a;
   --md-primary-bg-color:        #e9c6f0;
   --md-typeset-a-color:         #e9c6f0;
   --md-default-bg-color:        #141012;
+  --md-accent-fg-color:         #e9c6f0;
 }
