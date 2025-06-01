@@ -6,8 +6,16 @@ theme:
   favicon: assets/favicon.png
   custom_dir: assets_main
   palette:
-    primary: custom
-    scheme: slate
+    - scheme: blisslight
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Noto Sans
     code: Noto Sans Mono
