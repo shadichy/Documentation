@@ -64,6 +64,7 @@ nav:
       - configuration/README.md
       - Configuration Through Command Line Parameters: configuration/Configuration-through-Command-Line-Parameters.md
       - Calibrate and configure iptsd: configuration/Calibrate-and-configure-iptsd.md
+      - Preparing a Virtual Machine: configuration/vm-setup.md
   - Knowledgebase:
       - knowledgebase/README.md
       - Hardware Requirements: knowledgebase/hardware-requirement.md
@@ -72,7 +73,6 @@ nav:
           - BlissOS Go: knowledgebase/other-bliss-variant/go-builds.md
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
-      - Preparing a Virtual Machine: knowledgebase/vm-setup.md
       - Compatibility List: knowledgebase/compatibility-list.md
   - Development:
       - development/README.md
