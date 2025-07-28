@@ -48,13 +48,13 @@ extra:
       link: https://t.me/blissx86
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/F9n5gbdNy2
-copyright:  Copyright © 2013 - 2024 BlissLabs
+copyright:  Copyright © 2013 - 2025 BlissLabs
 nav:
   - Main Page: README.md
   - Frequently Asked Questions (FAQs): faq.md
   - Installation guide:
     - installation/README.md
-    - Automatic with Installers: 
+    - Automatic with Installers:
       - Bootable Installer: installation/auto/bootable-installer.md
       - Windows Installer: installation/auto/windows-installer.md
     - Manual Setup:
@@ -66,7 +66,7 @@ nav:
     - configuration/README.md
     - Configuration Through Command Line Parameters: configuration/Configuration-through-Command-Line-Parameters.md
     - Calibrate and configure iptsd: configuration/Calibrate-and-configure-iptsd.md
-  - Knowledgebase: 
+  - Knowledgebase:
     - knowledgebase/README.md
     - Hardware Requirements: knowledgebase/hardware-requirement.md
     - Different BlissOS variants:
@@ -76,7 +76,7 @@ nav:
       - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
     - Preparing a Virtual Machine: knowledgebase/vm-setup.md
     - Compatibility List: knowledgebase/compatibility-list.md
-  - Development: 
+  - Development:
     - development/README.md
     - Maintaining Proper Authorship: development/maintaining-proper-authorship.md
     - Obtain the Source Code: development/obatain-source-and-build.md
