@@ -54,7 +54,6 @@ nav:
       - installation/README.md
       - Automatic with Installers:
           - Bootable Installer: installation/auto/bootable-installer.md
-          - Windows Installer: installation/auto/windows-installer.md
       - Manual Setup:
           - The basics: installation/manual/the-basics.md
           - Setup Linux's Grub2: installation/manual/setup-linux-grub2.md
