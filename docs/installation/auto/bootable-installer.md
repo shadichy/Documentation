@@ -4,6 +4,8 @@ The bootable installer is based on [Android-x86's newinstaller](https://git.osdn
 
 ## Preparation
 
+- An USB drive (8gb should be enough)
+
 - A software to flash images to removable media
 
 For removable media such as USB or SD Card, we recommend [balenaEtcher](https://etcher.balena.io/). Etcher is being used internally by us to flash and test the installer on our own hardware. There are other software you can choose, however we don't guarantee that it will work.
@@ -28,7 +30,7 @@ Download the iso at [https://blissos.org](https://blissos.org). Then open Etcher
 
 ![](../../../assets/etcher_01.png)
 
-Plug your USB or SD Card in and choose it at `Select target` 
+Plug your USB or SD Card in and choose it at `Select target`
 
 ![](../../../assets/etcher_02.png)
 
@@ -36,7 +38,8 @@ Then click `Flash!` to flash the image.
 
 ![](../../../assets/etcher_03.png)
 
-Once done, you now have an bootable BlissOS drive
+Once done, congrats, you now have a bootable BlissOS drive 🥳
+
 
 ## Boot into the installer
 
@@ -46,11 +49,10 @@ Once done, you now have an bootable BlissOS drive
 
 Access the boot menu on your device, choose to boot the BlissOS drive. You'll see the boot loader menu appear:
 
-| On UEFI, BlissOS uses Grub2    | On Legacy BIOS, BlissOS uses syslinux       |
-|:-----------------------:|:-----------------------:|
-| ![](../../../assets/menu_uefi.png) | ![](../../../assets/menu_bios.png)|
+## Getting Started with the installation environment
 
-Choose the Installation option, you will be booted into the bootable installer.
+## Install BlissOS
 
-## **[UEFI only]** choosing the EFI System Partition
+## Post-installation
 
+## Upgrade BlissOS

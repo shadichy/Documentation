@@ -1,4 +1,9 @@
 # Setup booting on rEFInd
 
-page for set up grub2 that Linux gave
+page for setting up with rEFInd
 
+## Preparation
+
+## Writing a custom configuration file
+
+## Reboot and test
