@@ -8,10 +8,6 @@ order: 3
 
 To be able to use BlissOS, you must have a CPU that supports at least x86_64-v2 [Microarchitecture level](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels). This version match with [x86_64 Android ABI requirement](https://developer.android.com/ndk/guides/abis) so your CPU must be compatible or else it won't be able to boot at all.
 
-!!!warning
-
-    On [Android ABIs](https://developer.android.com/ndk/guides/abis) page, the note said that this is `x86-64-v1 only` which is actually misleading. only x86_64-v2 and above have the required instructions for running Android on x86_64 devices for example SSE4.2 !
-
 The rest of the requirement are follow:
 
 Minimum (assuming you are using BlissOS Go):
