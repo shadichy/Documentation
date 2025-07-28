@@ -62,8 +62,8 @@ nav:
       - Install on a Virtual Machine: installation/vm.md
   - Configuration:
       - configuration/README.md
-      - Configuration Through Command Line Parameters: configuration/Configuration-through-Command-Line-Parameters.md
-      - Calibrate and configure iptsd: configuration/Calibrate-and-configure-iptsd.md
+      - Configuration Through Command Line Parameters: configuration/calibrate-configure-iptsd.md
+      - Calibrate and configure iptsd: configuration/config-cmdline.md
       - Preparing a Virtual Machine: configuration/vm-setup.md
   - Knowledgebase:
       - knowledgebase/README.md
