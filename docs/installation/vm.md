@@ -1,5 +1,3 @@
 # Install BlissOS on a Virtual Machine
 
-How to set up on a VM
-
-tell people to follow bootable installer and then redirect to configuration/vm-setup
+Refer to [Preparing a Virtual Machine](/configuration/vm-setup)
