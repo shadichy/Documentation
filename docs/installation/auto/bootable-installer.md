@@ -1,14 +1,12 @@
-# Using the Installer
+# Using the Bootable Installer
 
-The new installer which is included within BlissOS bootable ISO is the new [aaropa](https://github.com/Ananda-Aropa)-based installer, that comes with a full graphical environment contains Calamares installer and a set of tools for debugging and diagnosing, completely leverage the user experience of Android-x86 installing procedure. This section will show you how to get BlissOS installed using the installer.
+The new installer which is included within BlissOS bootable ISO is the new [aaropa](https://github.com/Ananda-Aropa)-based installer, that comes with a full graphical environment contains Calamares installer and a set of tools for debugging and diagnosing, completely leverage the user experience of Android-x86 installing procedure. This section will show you how to get BlissOS installed using this bootable installer.
 
 ## Prerequisites
 
 - An USB drive or an SD card (minimum 4Gb)
 
 - A software to flash images to removable media (either [Rufus](https://rufus.ie/) (Windows) or [balenaEtcher](https://etcher.balena.io/))
-
-- Free space on your hard drive (at least 16Gb of free storage)
 
 Check out [hardware requirements](../../../knowledgebase/hardware-requirement) to know how much space you need. After knowing how much space you want to set, if you want to dual-boot with a existing operating system, we recommend splitting the drive directly on your current OS to create a new partition for BlissOS. This way you won't have to spend time with the partition tools anymore.
 
