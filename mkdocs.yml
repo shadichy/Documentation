@@ -36,7 +36,7 @@ markdown_extensions:
       anchor_linenums: true
   - attr_list
   - md_in_html
-  - pymdownx.superfences
+  - pymdownx.blocks.caption
 extra:
   social:
     - icon: octicons/globe-16
@@ -61,9 +61,10 @@ nav:
       - Install on a Virtual Machine: installation/vm.md
   - Configuration:
       - configuration/README.md
-      - Configuration Through Command Line Parameters: configuration/calibrate-configure-iptsd.md
-      - Calibrate and configure iptsd: configuration/config-cmdline.md
+      - Configuration Through Command Line Parameters: configuration/config-cmdline.md
+      - Calibrate and configure iptsd: configuration/calibrate-configure-iptsd.md
       - Preparing a Virtual Machine: configuration/vm-setup.md
+      - Setup kernel's cmdline parameters: configuration/kernel-parameters.md
   - Knowledgebase:
       - knowledgebase/README.md
       - Hardware Requirements: knowledgebase/hardware-requirement.md
@@ -73,6 +74,8 @@ nav:
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
       - Compatibility List: knowledgebase/compatibility-list.md
+      - Userdata options: knowledgebase/userdata-options.md
+      - BlissOS' kernel parameters cheat sheets: knowledgebase/kernel-parameters-cheat-sheet.md
   - Development:
       - development/README.md
       - Maintaining Proper Authorship: development/maintaining-proper-authorship.md
