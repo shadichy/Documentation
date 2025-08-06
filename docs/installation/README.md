@@ -1,9 +1,9 @@
 ---
 icon: material/progress-download
 ---
-# Guide to install BlissOS
+# BlissOS Installation Guide
 
-To be able to install BlissOS into your device, choose one of the installation method on the left. We splited all the method into 2 differents sections:
+We've split the installation guide to 2 different methods. You can select one of these to continue:
 
-- Automatic with Installers: Install using recommended method which is our bootable installer.
-- Manual Setup: Manually setting up your BlissOS installation to suit your need.
+- [Using the Installer](/installation/auto/installer) which comes within the bootable ISO of BlissOS (recommended).
+- [Manual Setup](/installation/manual) your BlissOS instance with everything customized on your own.
