@@ -61,7 +61,6 @@ nav:
       - Install on a Virtual Machine: installation/vm.md
   - Configuration:
       - configuration/README.md
-      - Configuration Through Command Line Parameters: configuration/config-cmdline.md
       - Calibrate and configure iptsd: configuration/calibrate-configure-iptsd.md
       - Preparing a Virtual Machine: configuration/vm-setup.md
       - Setup kernel's cmdline parameters: configuration/kernel-parameters.md
