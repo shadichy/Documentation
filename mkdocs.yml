@@ -85,3 +85,5 @@ nav:
       - XDA Threads: feedback/xda.md
   - Frequently Asked Questions (FAQs): faq.md
   - Code of Conduct: CODE_OF_CONDUCT.md
+plugins:
+  - glightbox
