@@ -32,6 +32,10 @@ The files we need to copy are:
 
 Depend on the purpose, you may want to deploy BlissOS A-only or AB-mode (OTA-ready).
 
+!!!info
+
+	If you want to deploy BlissOS nested in a folder, note the relative path to the folder for the `SRC=` kernel parameter.
+
 ### For A-only deployment
 
 In this mode, you will get BlissOS running but you **cannot** update using internal updater or from ISO image.
@@ -93,4 +97,72 @@ dd if=/dev/zero of=misc.img bs=1M count=10
 
 All the commands must be run in the same directory as the BlissOS deployment.
 
+## Kernel parameters
+
+You should set the kernel parameters and save it for later use (in the Bootloader setup).
+
+Please refer to [BlissOS' kernel parameters cheat sheets](/knowledgebase/kernel-parameters-cheat-sheet) to know what to set.
+
+!!!info
+
+	If your are on AB-Mode, here's the list of required kernel parameters:
+	- `androidboot.slot_suffix=_a`: For setting slot suffix (`_a` or `_b`).
+	- `androidboot.mode=normal`: For setting boot mode (`normal` or `recovery`).
+	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (which stores variables for kernel parameters like 2 above).
+
 ## Bootloader setup
+
+We assume that you already have one of these bootloaders installed on our machine to continue: GRUB, rEFInd.
+
+If you don't, please manually install one of them before continuing.
+
+!!!info
+
+	We currently support GRUB and rEFInd only. For those who use Limine or systemd-boot (or other bootloaders), you'll have to figure out how to configure manually.
+
+### GRUB
+
+#### Automatically probed using grub-android-prober
+
+You actually don't need to configure anything outside of appending kernel parameters to the `cmdline.txt` command line. On your linux side, install [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober) and regenerate GRUB configuration and there you go.
+
+For those who set up AB-Mode, append `cmdline="androidboot.slot_suffix=_a androidboot.mode=normal"` (to set slot to A and boot mode to normal) to the `boot/ab.env.cfg` file in the deployment directory (create the file if it's not present), append `androidboot.bootctrl_bootcfg=/boot/ab.env.cfg` to the `cmdline.txt` file.
+
+#### Manual configuration
+
+Create and append the following to the `/etc/grub.d/40_blissos` file for custom menu entry:
+
+```sh
+menuentry "BlissOS" {
+	insmod all_video
+	search --set=root --file <src>/kernel
+	linux <src>/kernel SRC=<src> <kernel params>
+	initrd <src>/initrd.img
+}
+```
+
+Replace `<src>` with the path to the BlissOS deployment directory, relative to the root directory of the partition mountpoint (remove it if it's already in the root directory) and `<kernel params>` with your kernel parameters.
+
+If you set up AB-Mode, change `/kernel` to `/kernel_a`, `/initrd.img` to `/initrd_a.img` and append `androidboot.slot_suffix=_a androidboot.mode=normal` to the kernel parameters (the `linux` line).
+
+Save the file and regenerate GRUB configuration.
+
+### rEFInd
+
+Create `/boot/efi/EFI/refind/blissos.conf` for custom menu entry.
+
+Append to the `/boot/efi/EFI/refind/blissos.conf` file:
+
+```sh
+
+menuentry "BlissOS" {
+  volume <your partition identifier>
+  loader <src>/kernel
+  initrd <src>/initrd.img
+  options "androidboot.mode=normal SRC=<src> <kernel params>"
+}
+```
+
+Replace `<src>` with the path to the BlissOS deployment directory, relative to the root directory of the partition mountpoint (remove it if it's already in the root directory), replace `<kernel params>` with your kernel parameters, and `<your partition identifier>` with the partition UUID (partuuid) or label (partlabel) of the partition you deploy BlissOS on (look up `/dev/disk/by-partuuid` or `/dev/disk/by-partlabel`).
+
+If you set up AB-Mode, change `/kernel` to `/kernel_a`, `/initrd.img` to `/initrd_a.img` and append `androidboot.slot_suffix=_a androidboot.mode=normal` to the kernel parameters (the `options` line).

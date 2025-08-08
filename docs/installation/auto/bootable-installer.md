@@ -90,11 +90,11 @@ We currently support within the installation process of 2 different bootloaders,
 - GRUB (recommended)
 - rEFInd
 
-If you don't want to install any bootloader to configure it yourself, you can select `None`.
+If you want to dualboot with preinstalled GRUB on Linux, select `None` and later after installed, return to your linux distro and install [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober).
 
 !!!info
 
-    If you select `None`, check out Manual Setup section to know how to configure BlissOS into your bootloader manually !
+    If you want to configure bootloader yourself, select `None` and check out [Manual Setup](/installation/manual) section to know how to configure BlissOS into your bootloader manually !
 
 
 ### Enter Calamares
