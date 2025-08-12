@@ -264,3 +264,8 @@ Here's how to do it:
 
 ### Getting logs if the installer failed
 
+Nothing is perfect. Every software can still have some issues.
+
+If the installer fails, open File manager, go to `~/.cache/calamares/session.log`, check the last 100 lines of the file to see what went wrong.
+
+Once caught the problem, issue a [Github Issue](https://github.com/BlissOS/bug_reports/issues) with a shot of the failed part of the log. Or go to our [Telegram](https://t.me/blissx86) chat room to ask for help.
