@@ -239,7 +239,8 @@ Screenshot of BlissOS' GRUB
 Once restarted, you will be able to see BlissOS' GRUB screen (or rEFInd, depending on wait you choose earlier), press Enter to boot into your BlissOS installation.
 
 If you have any issue with the OS, head over to [Configuration](/configuration) to learn more about how to configure the OS to suit your need.
-<br><br><br><br><br> <!-- someone pls doing CSS trick so I don't have to do this -->
+
+---
 
 ## Addendum
 ### Upgrading/Repairing BlissOS using Manual Partitioning
