@@ -16,7 +16,7 @@ Minimum (assuming you are using BlissOS Go):
 CPU : Any x86_64-v2+ compatible CPU
 RAM : 1.5 GB minimum
 GPU : Any, but highly recommend Intel or AMD
-Storage : 8gb or higher
+Storage : 20 GB or higher
 ```
 
 Recommended:
@@ -25,7 +25,7 @@ Recommended:
 CPU : Any x86_64-v2+ compatible CPU
 RAM : 8 GB minimum
 GPU : Any, but highly recommend Intel or AMD
-Storage : 64gb or higher
+Storage : 64 GB or higher
 ```
 
 ## Knowing if your CPU supported x86_64-v2
