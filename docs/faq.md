@@ -20,7 +20,7 @@ Yes, we have ! BlissOS now include [XtMapper](https://github.com/Xtr126/XtMapper
 
 ## Is everything on BlissOS open-source ?
 
-## Can you help me choose the best version for my hardware ?
+## Can my pc/laptop run BlissOS ?
 
 ## Why I can't boot into my other OS like Windows after installing BlissOS ?
 
