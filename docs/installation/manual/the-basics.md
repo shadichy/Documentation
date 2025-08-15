@@ -1,70 +1,98 @@
 # The basics
 
-Understanding the basics of what to do & what to prepare before starting manual setup
+Understanding the basics of what to do & what to prepare before starting manual setup.
 
 ## Prerequisites
 
 You'll need these following:
-- A 16+Gb storage partition (of course)
-- A working Linux environment (if you only have Windows, ensure that at least you have `dd`, `erofs` tools and `squashfs` tools with a Linux filesystem driver and toolchain (WinBtrfs, Ext4Fsd,...), or WSL installed)
-- A BlissOS ISO image
+
+- A 20+ GB storage partition (as stated in [Hardware Requirement](/knowledgebase/hardware-requirement))
+- A working Linux environment 
+
+!!! Info
+	If you only have Windows, ensure that at least you have [dd](https://www.msys2.org/), [erofs-utils](https://github.com/sekaiacg/erofs-utils) (or [squashfs-tools](https://infraroot.at/pub/squashfs/windows/), depends on the system.efs/sfs inside the iso, [7zip-zstd](https://github.com/mcmilk/7-Zip-zstd) can also be used for `system.sfs`) with a Linux filesystem driver and toolchain ([WinBtrfs](https://github.com/maharmstone/btrfs), [Ext4Fsd](https://github.com/bobranten/Ext4Fsd), 3rd-party partition manager, etc) or just get WSL2 installed. These will be used to extract/create required files for BlissOS.
+
+- A BlissOS .iso image (duh)
 
 ## Setting up place to put BlissOS in
 
-First, format the partition and mount it.
+If you are using Linux with a supported filesystem and ***unencrypted***, you can create a directory at `/` and putting BlissOS on it. For example, you can create `/blissos` like this
+
+![](../../../assets/manual_install_linuxdir.png){ width="500" }
+
+Otherwise, you can create a separate partition with supported filesystem.
 
 !!!info
 
-	BlissOS only natively supports `extfs` and `btrfs` filesystems. If you want to deploy on other filesystems (such as `ntfs` or `exfat`), you may have to take some extra steps, and a `data.img` is required.
+	BlissOS only natively supports `ext4`, `f2fs` and `btrfs` filesystems. If you want to deploy on other filesystems (such as `ntfs` or `exfat`), you may have to take some extra steps, and a `data.img` is required.
+
+!!!info
+
+	If you want to deploy BlissOS nested in a folder (like putting it under a Linux `/` drive that we mentioned earlier), note the relative path to the folder for the `SRC=` kernel parameter (For example `SRC=/blissos`).
+
 
 ## Copy BlissOS files
 
-Mount the BlissOS ISO image.
-The files we need to copy are:
+Mount the BlissOS .iso image. You will need to pull these files out:
+
 - `kernel`
 - `initrd.img`
-- `system.efs` (`system.sfs`)
+- `system.efs` (or `system.sfs` on older version)
 - `ramdisk-recovery.img`
 
+<!-- 
 !!!info
 
 	For BlissOS 19 or later, we will also need to copy a `vendor.img` file.
 
-Depend on the purpose, you may want to deploy BlissOS A-only or AB-mode (OTA-ready).
+Depend on the purpose, you may want to deploy BlissOS A-only or AB-mode (OTA-ready). -->
 
-!!!info
-
-	If you want to deploy BlissOS nested in a folder, note the relative path to the folder for the `SRC=` kernel parameter.
+Once you got the files, follow one of these two method to deploy the images:
 
 ### For A-only deployment
 
-In this mode, you will get BlissOS running but you **cannot** update using internal updater or from ISO image.
+In this mode, you will get BlissOS running but you **cannot** be able to update using internal updater or from .iso image.
 
-Just need to copy the files from the BlissOS ISO mountpoint to the partition mountpoint, and navigate to the next step.
+Just need to copy the files from BlissOS .iso to where you want to put BlissOS in, and navigate to the next step.
 
 ### For AB-mode deployment
 
-In this mode, your BlissOS can be updated using internal updater (OTA-ready) or from ISO image.
+In this mode, your BlissOS can be updated using internal updater (OTA-ready) or from .iso image.
 
-First, copy the files from the BlissOS ISO mountpoint to the partition mountpoint, rename `ramdisk-recovery.img` to `recovery.img`.
+First, copy the files from BlissOS .iso to where you want to put BlissOS in, rename `ramdisk-recovery.img` to `recovery.img`.
 
-Then, unpack the `system.efs` with `erofs` tool (if the system image name is `system.sfs`, unpack it with `unsquashfs`) to get the `system.img`. Move it to the root of the partition mountpoint if it's not there. You can later delete the `system.efs` (`system.sfs`) file.
+Then, unpack the `system.efs` (or `system.sfs`) by using `mount` to get the `system.img`.
+
+For example
+``` sh
+mkdir out
+sudo mount system.efs out
+cp out/system.img system.img
+sudo umount out && rm -rf out
+```
+!!!info 
+	You can use other programs to extract, just get `system.img` out in the end.
+
+Once extracted, remove the `system.efs` (or `system.sfs`) file.
 
 Next, rename the files by appending `_a` as a postfix to the file names and before the file extension (`kernel` -> `kernel_a`, `initrd.img` -> `initrd_a.img`,...). This will be the slot A of your BlissOS.
 
-!!!info
+!!!warning
 
 	The size of files in slot A must be equal to the size of files in slot B. But with each update, the payload size may differs. To solve this, we can use `dd` to append empty data to slot A to scale it up to the same size as slot B.
 
-Following that, define the upper size for each of files in slot A, and create slot B files with the defined upper sizes using `dd` in the same directory as slot A. For example:
+Following that, define the upper size for each of files in slot A, and create slot B files with the defined upper sizes using `dd` in the same directory as slot A.
 
+We will use `system.img` as an example, do the same for the rest of the images:
 ```sh
 # Create system_b.img, upper size is 5GB
 dd if=/dev/zero of=system_b.img bs=1G count=5
-# ... applies to other files
+# ... applies to other files, note that they 
+# should be way smaller, you don't want to have
+# 5gb of initrd :).
 ```
 
-And then scale the slot A files to the upper size using `dd` with `conv=notrunc`. For example:
+And then scale the slot A files to the upper size using `dd` with `conv=notrunc`.
 
 ```sh
 # Get the size of system_a.img in MB
@@ -76,20 +104,33 @@ dd if=/dev/zero of=system_a.img bs=1M count=$((5120 - size)) conv=notrunc
 # ... applies to other files
 ```
 
+Once done, your files should look like this
+
+![](../../../assets/manual_install_imgsize.png)
+
 ## Data image
 
-If you want to create a data.img, or you want to use other filesystems than extfs or btrfs, you can do it by:
+If you want to create a data.img, or you want to use other filesystems than `ext4` or `btrfs`, you can do it by:
 
 ```sh
-dd if=/dev/zero of=data.img bs=1M count=<size in MB>
+dd if=/dev/zero of=data.img bs=1M count=<size_in_MB>
+mkfs.<your_chosen_filesystem> data.img
+```
+
+For example
+```sh
+dd if=/dev/zero of=data.img bs=1M count=32000
 mkfs.ext4 data.img
 ```
+!!!warning
+
+    `ext4` is the default and the recommend filesystem for BlissOS. If you just want a "just work" installation, keep `ext4` as the chosen filesystem !
 
 All the commands must be run in the same directory as the BlissOS deployment.
 
 ## Misc image
 
-A 10MB `misc.img` is required if you have setup AB-mode. Create it by:
+A 10MB `misc.img` is required for the AB-mode setup. Create it with:
 
 ```sh
 dd if=/dev/zero of=misc.img bs=1M count=10
@@ -97,72 +138,83 @@ dd if=/dev/zero of=misc.img bs=1M count=10
 
 All the commands must be run in the same directory as the BlissOS deployment.
 
-## Kernel parameters
+## Making a custom fstab
 
-You should set the kernel parameters and save it for later use (in the Bootloader setup).
-
-Please refer to [BlissOS' kernel parameters cheat sheets](/knowledgebase/kernel-parameters-cheat-sheet) to know what to set.
-
-!!!info
-
-	If your are on AB-Mode, here's the list of required kernel parameters:
-	- `androidboot.slot_suffix=_a`: For setting slot suffix (`_a` or `_b`).
-	- `androidboot.mode=normal`: For setting boot mode (`normal` or `recovery`).
-	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (which stores variables for kernel parameters like 2 above).
+You will need to create a `fstab.android` file in the same place you put BlissOS in. To know how to create this file, check out [Pseudo filesystem table](/configuration/pseudo-filesystem-table)
 
 ## Bootloader setup
 
-We assume that you already have one of these bootloaders installed on our machine to continue: GRUB, rEFInd.
+!!!danger
+	If you setup BlissOS with AB-mode, please install a bootloader that allow setting custom entry using a file. If it doesn't expose a file, the updater **will not work**! An example of this is `EFIStub`.
 
-If you don't, please manually install one of them before continuing.
+We will assume that you've installed a bootloader. This part will just talk about how to setup a custom entry for BlissOS.
 
-!!!info
+First, custom entry should tell you to specify which partition to look at (for example rEFInd has [volume](https://www.rodsbooks.com/refind/configfile.html#stanzas) that check for partitions' GUID or label). Point it to the partition that you put BlissOS in earlier.
 
-	We currently support GRUB and rEFInd only. For those who use Limine or systemd-boot (or other bootloaders), you'll have to figure out how to configure manually.
+Usually bootloaders will have these 3 main parts for a custom entry:
 
-### GRUB
-
-#### Automatically probed using grub-android-prober
-
-You actually don't need to configure anything outside of appending kernel parameters to the `cmdline.txt` command line. On your linux side, install [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober) and regenerate GRUB configuration and there you go.
-
-For those who set up AB-Mode, append `cmdline="androidboot.slot_suffix=_a androidboot.mode=normal"` (to set slot to A and boot mode to normal) to the `boot/ab.env.cfg` file in the deployment directory (create the file if it's not present), append `androidboot.bootctrl_bootcfg=/boot/ab.env.cfg` to the `cmdline.txt` file.
-
-#### Manual configuration
-
-Create and append the following to the `/etc/grub.d/40_blissos` file for custom menu entry:
-
-```sh
-menuentry "BlissOS" {
-	insmod all_video
-	search --set=root --file <src>/kernel
-	linux <src>/kernel SRC=<src> <kernel params>
-	initrd <src>/initrd.img
-}
+```
+linux <where_is_your_kernel>
+initrd <where_is_your_initrd_img>
+options <which_cmdline_to_set>
 ```
 
-Replace `<src>` with the path to the BlissOS deployment directory, relative to the root directory of the partition mountpoint (remove it if it's already in the root directory) and `<kernel params>` with your kernel parameters.
+or if it doesn't have `options`:
 
-If you set up AB-Mode, change `/kernel` to `/kernel_a`, `/initrd.img` to `/initrd_a.img` and append `androidboot.slot_suffix=_a androidboot.mode=normal` to the kernel parameters (the `linux` line).
-
-Save the file and regenerate GRUB configuration.
-
-### rEFInd
-
-Create `/boot/efi/EFI/refind/blissos.conf` for custom menu entry.
-
-Append to the `/boot/efi/EFI/refind/blissos.conf` file:
-
-```sh
-
-menuentry "BlissOS" {
-  volume <your partition identifier>
-  loader <src>/kernel
-  initrd <src>/initrd.img
-  options "androidboot.mode=normal SRC=<src> <kernel params>"
-}
+```
+linux <where_is_your_kernel> <which_cmdline_to_set>
+initrd <where_is_your_initrd_img>
 ```
 
-Replace `<src>` with the path to the BlissOS deployment directory, relative to the root directory of the partition mountpoint (remove it if it's already in the root directory), replace `<kernel params>` with your kernel parameters, and `<your partition identifier>` with the partition UUID (partuuid) or label (partlabel) of the partition you deploy BlissOS on (look up `/dev/disk/by-partuuid` or `/dev/disk/by-partlabel`).
+`<where_is_your_kernel>` and `where_is_your_initrd_img` are the location of your BlissOS' `kernel` and `initrd.img` , `<which_cmdline_to_set>` is the custom kernel parameter that you want to set. 
 
-If you set up AB-Mode, change `/kernel` to `/kernel_a`, `/initrd.img` to `/initrd_a.img` and append `androidboot.slot_suffix=_a androidboot.mode=normal` to the kernel parameters (the `options` line).
+If you don't know which kernel parameter to set, please refer to [BlissOS' kernel parameters cheat sheets](/knowledgebase/kernel-parameters-cheat-sheet).
+
+!!!danger
+
+	For all types of deployment, `SRC=` must be set, this is the location that initrd will look for installation of BlissOS !
+
+	If your are on AB-Mode, these kernel parameters **must be set**:
+
+	- `androidboot.slot_suffix=_a`: For setting slot suffix (`_a` or `_b`).
+	- `androidboot.mode=normal`: For setting boot mode (`normal` or `recovery`).
+	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (set the file that stores your boot entry).
+
+With these information, your custom entry should look like this:
+
+```
+linux /kernel
+initrd /initrd.img
+options SRC=/ intel_idle.max_cstate=2 syscall_hardening=off
+```
+
+Or, if you put BlissOS in a directory
+
+```
+linux /blissos/kernel
+initrd /blissos/initrd.img
+options SRC=/blissos intel_idle.max_cstate=2 syscall_hardening=off
+```
+
+If you are using AB-mode, it should be like this
+
+```
+linux /kernel_a
+initrd /initrd_a.img
+options SRC=/ androidboot.slot_suffix=_a androidboot.mode=normal androidboot.bootctrl_bootcfg=/boot/my_bt/custom.conf intel_idle.max_cstate=2 syscall_hardening=off
+```
+
+We also provide [Recovery Mode](/configuration/recovery). To add an extra entry for it, copy the entry above but change/add `androidboot.mode=recovery`
+
+```
+linux /kernel
+initrd /initrd.img
+options SRC=/ androidboot.mode=recovery intel_idle.max_cstate=2 syscall_hardening=off
+```
+
+Once done, reboot and check to see if your custom entry is there.
+
+If you still have trouble setting up the entry, we provided some tutorial for specific bootloaders that you can use as an example. Head over to the Table of contents to see it.
+
+
+If everything works correctly then congrats 🥳. You've succeeded in manually installing BlissOS.
