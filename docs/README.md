@@ -4,22 +4,26 @@ icon: material/home
 ---
 # BlissOS Documentation
 
-Welcome to [BlissOS](https://blissos.org) Documentation, the main source of information related to BlissOS. We hope that you can find all of your answer you want in this page.
+Welcome to the [BlissOS](https://blissos.org) Documentation, your main source of information for everything related to the project. We hope you can find all the answers you're looking for in this page\!
 
 To start, check out the sidebar on the left for Table of contents
 
 ## But what is BlissOS ?
 
-It's surprising you'd ask, given that you're already on the Documentation page! [BlissOS](https://blissos.org) is an operating system built on the [Android Open Source Project](https://source.android.com/). Developed by [BlissLabs](https://blisslabs.org/), BlissOS offers a wide range of customization options and features, delivering an exceptional Android experience on PCs for over a decade.
+It's surprising you'd ask, given that you're already on the Documentation page! [BlissOS](https://blissos.org) is an operating system built on the [Android Open Source Project](https://source.android.com/). Developed by our team at [BlissLabs](https://blisslabs.org/), it's packed with a wide range of customization options and features to deliver an exceptional Android experience on PCs.
 
-Our journey began with Android 7.1, and we remain committed to actively improving and evolving the OS.
+Our journey began over a decade ago with Android 7.1, and we remain dedicated to actively improving and evolving the OS.
+
+!!!info
+    Alongside our community-focused work on [BlissOS](https://blissos.org), we also develop [**Bass OS**](https://bassos.navotpala.tech/), our commercial, product-focused version tailored for enterprise and specific hardware solutions. The innovations and stability improvements from [Bass OS](https://bassos.navotpala.tech/) often make their way back into Bliss OS, strengthening the entire ecosystem and benefiting our whole community.
+
 
 ## Great, but where should I start ? I'm new here !
 
 To start, first you need to know about the [hardware requirement](knowledgebase/hardware-requirement.md) to be able to run the OS.
 
-Once you know that your hardware is capable of running BlissOS, head over to the [installation](installation) section to choose the installation method of your choice to handle. For starter, installation media is our choice to install BlissOS.
+Once you know your hardware is compatible, head over to the [installation section](/installation) and choose your preferred method. For beginners, creating an installation media is a great choice.  
 
-If you see the main sites have many different variants (Generic, Surface, Go, Zenith) and wonder which one should you choose, check out [this page](knowledgebase/other-bliss-variant) and choose the variant you want to know.
+If you see different variants on our site (Generic, Surface, Go, Zenith) and wonder which one you need, check out [this page](knowledgebase/other-bliss-variant) for a detailed breakdown.
 
-You may have some questions and some of them might be on the [FAQs](faq).
+You may have some questions and some of them might be on the [FAQs page](faq).
