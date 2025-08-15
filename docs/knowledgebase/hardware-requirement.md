@@ -2,7 +2,7 @@
 order: 3
 ---
 
-# Hardware requirements
+# Hardware Requirements
 
 ## The requirements
 
