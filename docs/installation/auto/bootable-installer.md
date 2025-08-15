@@ -90,11 +90,11 @@ We currently support within the installation process of 2 different bootloaders,
 - GRUB (recommended)
 - rEFInd
 
-If you want to dualboot with preinstalled GRUB on Linux, select `None` and later after installed, return to your linux distro and install [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober).
+If you don't want to install any bootloader to configure it yourself, you can select `None`.
 
 !!!info
 
-    If you want to configure bootloader yourself, select `None` and check out [Manual Setup](/installation/manual) section to know how to configure BlissOS into your bootloader manually !
+    If you want to configure bootloader yourself, select `None` and check out **Manual Setup** section to know how to configure BlissOS into your bootloader manually !
 
 
 ### Enter Calamares
@@ -113,7 +113,7 @@ You will see the partition screen like this:
 
 If you have multiple drives, choose the one you want to install BlissOS in at `Select storage device`
 
-There's 3 partitioning options available: `Install alongside`, `Replace a partition`, `Erase disk`, `Manual`.Please refer to the following for selecting the right option for you:
+There're 4 partitioning options available: `Install alongside`, `Replace a partition`, `Erase disk`, `Manual`. Please refer to the following for selecting the right option for you:
 
 #### Install alongside
 
@@ -239,6 +239,7 @@ Screenshot of BlissOS' GRUB
 Once restarted, you will be able to see BlissOS' GRUB screen (or rEFInd, depending on wait you choose earlier), press Enter to boot into your BlissOS installation.
 
 If you have any issue with the OS, head over to [Configuration](/configuration) to learn more about how to configure the OS to suit your need.
+<br><br><br><br><br> <!-- someone pls doing CSS trick so I don't have to do this -->
 
 ---
 
@@ -264,8 +265,16 @@ Here's how to do it:
 
 ### Getting logs if the installer failed
 
-Nothing is perfect. Every software can still have some issues.
+While we've conducted a lot testing & bug fixing for our installer, the reality is that *Nothing is perfect*, so it can still be able to have some issues !
 
-If the installer fails, open File manager, go to `~/.cache/calamares/session.log`, check the last 100 lines of the file to see what went wrong.
+If the installer fails, open File Manager (aka *PCManFM*), go to `~/.cache/calamares/session.log` (or `/root/.cache/calamares/session.log`), open it and check the last 100 lines of the file to see what went wrong.
 
-Once caught the problem, issue a [Github Issue](https://github.com/BlissOS/bug_reports/issues) with a shot of the failed part of the log. Or go to our [Telegram](https://t.me/blissx86) chat room to ask for help. For more information, check out [this](/feedback) page.
+![](../../../assets/install_getlogs.png){ width="500" }
+
+Once you identified the issue, here's what you can do: 
+
+- Learn how to mount an internal drive (or external drive like another USB) that allows `Read/Write` operation and copy the log into it. You can search for a tutorial online like [this one](https://phoenixnap.com/kb/linux-mount-command).
+- **For VMs only**: export the logs using serial console or [VSOCK](https://man7.org/linux/man-pages/man7/vsock.7.html). This requires you have some research and not recommend for newcomers.
+- Screenshots or..... taking pictures (please take the one that we can see 😅)
+
+After you got the log, head over to our [Github Issues](/feedback/github-issue) or [Messaging Platform](/feedback/messaging) to report it.
