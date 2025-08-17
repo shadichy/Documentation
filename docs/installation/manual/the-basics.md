@@ -59,6 +59,9 @@ Just need to copy the files from BlissOS .iso to where you want to put BlissOS i
 
 In this mode, your BlissOS can be updated using internal updater (OTA-ready) or from .iso image.
 
+!!!info "Did you know ?"
+	You can setup proper AB-mode into an empty partition using our [bootable installer](/installation/auto/bootable-installer) ! When choosing Bootloaders, just pick [None](/installation/auto/bootable-installer/#select-bootloader).
+
 First, copy the files from BlissOS .iso to where you want to put BlissOS in, rename `ramdisk-recovery.img` to `recovery.img`.
 
 Then, unpack the `system.efs` (or `system.sfs`) by using `mount` to get the `system.img`.
@@ -104,6 +107,15 @@ dd if=/dev/zero of=system_a.img bs=1M count=$((5120 - size)) conv=notrunc
 # ... applies to other files
 ```
 
+#### Misc image
+
+A 10MB `misc.img` is required for the AB-mode setup. Create it with:
+
+```sh
+dd if=/dev/zero of=misc.img bs=1M count=10
+```
+
+All the commands must be run in the same directory as the BlissOS deployment. <br>
 Once done, your files should look like this
 
 ![](../../../assets/manual_install_imgsize.png)
@@ -125,16 +137,6 @@ mkfs.ext4 data.img
 !!!warning
 
     `ext4` is the default and the recommend filesystem for BlissOS. If you just want a "just work" installation, keep `ext4` as the chosen filesystem !
-
-All the commands must be run in the same directory as the BlissOS deployment.
-
-## Misc image
-
-A 10MB `misc.img` is required for the AB-mode setup. Create it with:
-
-```sh
-dd if=/dev/zero of=misc.img bs=1M count=10
-```
 
 All the commands must be run in the same directory as the BlissOS deployment.
 
