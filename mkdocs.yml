@@ -62,7 +62,7 @@ nav:
           - Bootable Installer: installation/auto/bootable-installer.md
       - Manual Setup:
           - The basics: installation/manual/the-basics.md
-          - Setup Linux's Grub2: installation/manual/setup-linux-grub2.md
+          - Setup Linux's GRUB2: installation/manual/setup-linux-grub2.md
           - Setup rEFInd: installation/manual/setup-refind.md
       - Install on a Virtual Machine: installation/vm.md
   - Configuration:
