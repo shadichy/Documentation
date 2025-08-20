@@ -151,7 +151,7 @@ You will need to create a `fstab.android` file in the same place you put BlissOS
 
 We will assume that you've installed a bootloader. This part will just talk about how to setup a custom entry for BlissOS.
 
-First, custom entry should tell you to specify which partition to look at (for example rEFInd has [volume](https://www.rodsbooks.com/refind/configfile.html#stanzas) that check for partitions' GUID or label). Point it to the partition that you put BlissOS in earlier.
+First, custom entry should tell you to specify which partition to look at (for example rEFInd has [volume](https://www.rodsbooks.com/refind/configfile.html#stanzas) that check for partitions' GUID or label, GRUB has [set root](https://www.gnu.org/software/grub/manual/grub/grub.html#Naming-convention)). Point it to the partition that you put BlissOS in earlier.
 
 Usually bootloaders will have these 3 main parts for a custom entry:
 
