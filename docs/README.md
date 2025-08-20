@@ -14,7 +14,7 @@ It's surprising you'd ask, given that you're already on the Documentation page! 
 
 Our journey began over a decade ago with Android 7.1, and we remain dedicated to actively improving and evolving the OS.
 
-!!!info
+!!!info "Did you know ?"
     Alongside our community-focused work on [BlissOS](https://blissos.org), we also develop [**Bass OS**](https://bassos.navotpala.tech/), our commercial, product-focused version tailored for enterprise and specific hardware solutions. The innovations and stability improvements from [Bass OS](https://bassos.navotpala.tech/) often make their way back into Bliss OS, strengthening the entire ecosystem and benefiting our whole community.
 
 
