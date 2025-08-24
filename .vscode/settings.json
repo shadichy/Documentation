@@ -9,6 +9,7 @@
 		"iptsd",
 		"Microarchitecture",
 		"mountpoint",
-		"Termux"
+		"Termux",
+		"ramdisk"
 	]
 }
