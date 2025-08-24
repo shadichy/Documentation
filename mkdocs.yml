@@ -97,3 +97,4 @@ nav:
 plugins:
   - glightbox
   - search
+  - table-reader
