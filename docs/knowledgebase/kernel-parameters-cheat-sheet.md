@@ -40,6 +40,13 @@ Set boot mode.
 
 Set boot configuration file path. Required for AB-Mode. The file path must be visible to Android system after booted (in both recovery and normal boot).
 
+> Common boot configuration file paths:
+> - `/boot/grub/android.cfg` (standalone installation with GRUB)
+> - `/boot/efi/EFI/rEFInd/android.conf` (for standalone installation with rEFInd Boot Manager)
+> - `/boot/ab.env.cfg` (for bootloader-less installation/dual-boot with Linux)
+
+> Note that `/boot` is bind-mounted with rootfs partition `/boot` folder by default, files and directories under `/boot` are visible to `/boot` folder of an uptime Android system (See [Special mount targets](/configuration/pseudo-filesystem-table#special-mount-targets), row `bootloader`). You can get root permission using KernelSU and Termux to view the content of `/boot`.
+
 ## Logging & Debugging
 
 ### Quiet mode

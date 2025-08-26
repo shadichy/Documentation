@@ -180,7 +180,7 @@ If you don't know which kernel parameter to set, please refer to [BlissOS' kerne
 
 	- `androidboot.slot_suffix=_a`: For setting slot suffix (`_a` or `_b`).
 	- `androidboot.mode=normal`: For setting boot mode (`normal` or `recovery`).
-	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (set the file that stores your boot entry).
+	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (Refer to [Boot configuration file path](/knowledgebase/kernel-parameters-cheat-sheet#set-boot-configuration-file-path)).
 
 With these information, your custom entry should look like this:
 

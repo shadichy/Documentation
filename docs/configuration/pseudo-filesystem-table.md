@@ -6,6 +6,20 @@ The file is named `fstab.android` and located in root filesystem (where you inst
 
 This guide is for editing/modifying the pseudo fstab file.
 
+Example:
+
+|<src\>|<mnt_point\>|<type\>|<mnt_flags and options\>|<fs_mgr_flags\>|
+|---|---|---|---|---|
+|`$FS/system$SLOT.img`|`system$SLOT`||||
+|`$FS/kernel$SLOT`|`kernel$SLOT`||||
+|`$FS/initrd$SLOT.img`|`initrd$SLOT`||||
+|`$FS/recovery$SLOT.img`|`recovery$SLOT`||||
+|`$FS/misc.img`|`misc`||||
+|`UUID=1581-FD48`|`esp`|`vfat`|`defaults`| `defaults`|
+|`$FS/boot`|`bootloader`||||
+|`$FS/data.img`|`userdata`||||
+|`none`|`/sys/firmware/efi/efivars`|`efivarfs`|`defaults`|`defaults`|
+
 ## Syntax
 
 The pseudo fstab file itself is an actual Linux/Android fstab file, with some additional modifications in syntax for extra support for file mapping and directory binding.
@@ -28,7 +42,7 @@ The file is a text file represents a table, with the following columns:
 
 ### Special mount targets
 
-We've defined some special mount targets for file mapping and directory binding, representing standard Android block devices:
+We've defined some special mount targets (`<mnt_point>`) for file mapping and directory binding, representing standard Android block devices:
 
 {{ read_csv('assets/csv/fstab_mapper.csv') }}
 
@@ -39,3 +53,5 @@ We've defined some special mount targets for file mapping and directory binding,
 We provide variables to simplify the syntax and automate the mapping/binding tasks. Variables start with an `$` prefix. Please refer to the following table for variable information:
 
 {{ read_csv('assets/csv/fstab_vars.csv') }}
+
+> For example: `SRC` is `/BlissOS16` and slot suffix is `_a` then `$FS/system$SLOT.img` will become `/BlissOS16/system_a.img`.

@@ -11,4 +11,5 @@ recovery_a,`/dev/block/by-name/recovery_a`
 recovery_b,`/dev/block/by-name/recovery_b`
 misc,`/dev/block/by-name/misc`
 bootloader,`/boot`
+esp,`/boot/efi`
 userdata,`/dev/block/by-name/userdata` (or `/data` if userdata is directory)
