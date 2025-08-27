@@ -8,17 +8,29 @@ This guide is for editing/modifying the pseudo fstab file.
 
 Example:
 
-|<src\>|<mnt_point\>|<type\>|<mnt_flags and options\>|<fs_mgr_flags\>|
-|---|---|---|---|---|
-|`$FS/system$SLOT.img`|`system$SLOT`||||
-|`$FS/kernel$SLOT`|`kernel$SLOT`||||
-|`$FS/initrd$SLOT.img`|`initrd$SLOT`||||
-|`$FS/recovery$SLOT.img`|`recovery$SLOT`||||
-|`$FS/misc.img`|`misc`||||
-|`UUID=1581-FD48`|`esp`|`vfat`|`defaults`| `defaults`|
-|`$FS/boot`|`bootloader`||||
-|`$FS/data.img`|`userdata`||||
-|`none`|`/sys/firmware/efi/efivars`|`efivarfs`|`defaults`|`defaults`|
+```sh
+# fstab.android
+--------------------------------------------------------------------------------------------------------
+
+# <src>                 <mnt_point>                  <type>    <mnt_flags and options>    <fs_mgr_flags>
+# Read-only standard mappings
+$FS/system$SLOT.img     system$SLOT
+$FS/kernel$SLOT         kernel$SLOT
+$FS/initrd$SLOT.img     initrd$SLOT
+$FS/recovery$SLOT.img   recovery$SLOT
+
+# Read-write disk images/bindings
+$FS/boot                bootloader
+$FS/misc.img            misc
+$FS/data.img            userdata                     ext4      defaults                   defaults
+
+# Hardware partitions
+UUID=1581-FD48          esp                          vfat      defaults                   defaults
+
+# Virtual filesystems
+none                    /sys/firmware/efi/efivars    efivarfs  defaults                   defaults
+
+```
 
 ## Syntax
 
