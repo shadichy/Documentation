@@ -1,0 +1,5 @@
+Name,Type,Values,Description,Notes
+`BTLINUX_HAL`,variable,`1`,Use btlinux Bluetooth HAL instead of default controller. Unset to disable.,**WARNING:** This option is deprecated and is being removed in BlissOS 17+.
+`BT_BLE_DISABLE`,variable,`1`,Disable Bluetooth BLE completely. Unset to re-enable.,**WARNING:** This option is is only available on BlissOS 16+
+`BT_BLE_NO_VENDORCAPS`,variable,`1`,Disable BLE vendor capabilities. Unset to re-enable.,**WARNING:** This option is is only available on BlissOS 16+
+`BT_UART`,variable,<!-- undocumented -->,Set default Bluetooth UART port. Unset to use auto detection.,"Inherited from Android-x86,  we may not have to use this option again as most of Bluetooth drivers nowadays ultilize HCI."

@@ -1,0 +1,2 @@
+Name,Type,Values,Description,Notes
+`VIRT_WIFI`,variable,`1`,Enable virtual wifi. Unset to disable., 

@@ -1,0 +1,2 @@
+Name,Type,Values,Description,Notes
+`AUDIO_PRIMARY`,variable,"`x86` (default), `x86_celadon`",Set default audio HAL controller. Unset to use default.,`x86_celadon` works better with audio that uses [SOF](https://thesofproject.github.io/latest/getting_started/intel_debug/introduction.html) drivers.

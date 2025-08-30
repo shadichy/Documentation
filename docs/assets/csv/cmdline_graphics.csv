@@ -1,0 +1,16 @@
+Name,Type,Values,Description,Notes
+`nomodeset`,parameter, ,Set to completely disable graphics driver loading,"Check [linux kernel's parameter](https://www.kernel.org/doc/html/next/admin-guide/kernel-parameters.html), search for `nomodeset` for more info.<br> This option is useful in case your graphics driver causes black screen or artifacts on BlissOS."
+`HWACCEL`,variable,"`0`",Completely disable hardware acceleration. Unset to re-enable.,"Different from `nomodeset`, graphics driver is still being loaded, it just that Gralloc & HWC setup is now set the same as `nomodeset`. This is useful in case that graphics driver can load fine but it can't get into BlissOS."
+`EGL`,variable,"`mesa`(default), `angle`",Switching between different implementation of libEGL, 
+`MESA_LLVMPIPE`,variable,`1`,Force Mesa EGL to use llvmpipe. Unset to use default.,Only effective if you set `EGL=mesa`
+`MESA_ZINK`,variable,`1`,Force Mesa EGL to use Zink. Unset to use default.,Only effective if you set `EGL=mesa`
+`FORCE_GLES`,variable,"`2.0`, `3.0`, `3.1`, `3.2`",Set OpenGLES version. Unset to use default., 
+`FORCE_RENDERENGINE`,variable,"`skiaglthreaded` (default),`skiagl`, `threaded` (deprecated), `skiavk`, `skiavkthreaded` ",Force RenderEngine backend to skiagl. Unset to use default.,"Check [SurfaceFlinger.cpp](https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/native/services/surfaceflinger/SurfaceFlinger.cpp), search for `PROPERTY_DEBUG_RENDERENGINE_BACKEND` to know about the available backend.<br>`threaded` used to be the default option until BlissOS 16. Starting from BlissOS 17 we have to set `skiaglthreaded` because `threaded` is being deprecated."
+`HWC_HIDL`,variable,"`default-2.1`, `default-2.4`, `drmfb`",Set HWC HIDL interface. Unset to use default., 
+`HWC`,variable,"`drm`, `drm_celadon`, `drm_minigbm`, `drm_minigbm_celadon`",Set HWC interface. Unset to use default., `HWC` should be set to `drm_minigbm` or `drm_minigbm_celadon` only when using `minigbm*` gralloc.
+`GRALLOC`,variable,"`gbm`, `gbm_hack`, `minigbm`, `minigbm_gbm_mesa`, `minigbm_arcvm`",Set default gralloc. Unset to use default.,`minigbm_arcvm` is only for VMs using `virtio-gpu` driver.
+`GRALLOC4_MINIGBM`,variable,`1`,Uses Gralloc4 service instead of legacy Gralloc HAL on `minigbm`,Only usable if you use any `minigbm*` gralloc.
+`VULKAN`,variable,"`lvp`, `pastel`, `intel`, `amd`, `nouveau`, `virtio`",Set Vulkan HAL. Unset to use default., 
+`vmwgfx.force_resolution`,variable,resolution (`<width>x<height>`),Force resolution on `vmwgfx` driver. Unset to use default.,Extra parameter for `vmwgfx` driver taken from [0xCAFEBABE commit](https://github.com/android-generic/kernel-zenith/commit/f006384703f4412bd478fdc143e47385d7c425a2)
+`virtio-gpu.force_resolution`,variable,resolution (`<width>x<height>`),Force resolution on `virtio-gpu` driver. Unset to use default.,Extra parameter for `virtio-gpu` driver taken from [0xCAFEBABE commit](https://github.com/android-generic/kernel-zenith/commit/dc271fee1ced8cba3507058774b3e5242c1ccff0)
+`nouveau.modeset`,variable,`0`,Disable `nouveau` driver for Nvidia GPUs. Unset to re-enable.,Useful for laptops with Nvidia GPUs because in most cases we will not touch it.

@@ -1,0 +1,7 @@
+Name,Type,Values,Description,Notes
+`MULTI_PLANE`,variable,`1`,Enable multi-plane in HWC. Unset to disable., 
+`MULTI_PLANE_NUM`,variable,number,Set number of multi-plane in HWC. Unset to use default., 
+`HWC_PREFER_MODE`,variable,`0`,Set to `0` to support all display modes. Unset to use default., 
+`CONNECTOR_ID`,variable,number,Specify Connector ID. Unset to use default., 
+`MODE_ID`,variable,number,Specify Mode ID. Unset to use default., 
+`MULTI_REFRESH_RATE`,variable,`1`,Enable multi refresh rate for the system. Unset to disable., 

@@ -1,0 +1,6 @@
+Name,Type,Values,Description,Notes
+`quiet`,parameter, ,"Do not show any messages during the boot process.", This is a part of [linux kernel's parameter](https://docs.kernel.org/admin-guide/kernel-parameters.html).
+`androidboot.enable_console`,variable,"`0`, `1`","Disable/Enable virtual console on TTY."," Press `Ctrl+Alt+F1` to open the virtual console if enabled, `Ctrl+Alt+F7` to go back to Android GUI."
+`DEBUG`,variable,"`0`, `1`, `2`","Debug shell on boot. "," Set to `0` to disable. Overrides `quiet` kernel argument.<br>Set to `1` to launch a shell on rootfs mounted. <br>Set to `2` to launch a shell on rootfs mounted and another shell after the hook scripts are executed.<br><br>On debug shell, type `exit` or press `Ctrl+D` to exit the shell."
+`DEBUG_VSOCK`,variable,"`0`, `1`","Disable/Enable VSOCK ADB socket.",Guest CID is hardcoded to `3` and port is hardcoded to `5555`. Guest VM with VSOCK enabled can be connected using `adb connect vsock:3:5555`
+`androidboot.insecure_adb`,variable,"`0`, `1`","Disable/Enable insecure ADB.","**WARNING!!! THIS OPTION SHOULD ONLY BE USED TEMPORARY, NOT TO SET PERMANENTLY AS IT LITERALLY BYPASSES ALL OF ADB SECURITY MEASURES!!!**"

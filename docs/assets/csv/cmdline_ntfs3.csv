@@ -1,0 +1,4 @@
+Name,Type,Values,Description,Notes
+`BOOT_USE_NTFS3`,variable,`1`,Enable NTFS3 on initrd. Unset to disable.,Set this for BlissOS on NTFS setup.
+`VOLD_USE_NTFS3`,variable,`1`,Enable NTFS3 for vold. Unset to disable.,Set this to use NTFS3 when using NTFS drives on Android. We really recommend this driver !
+`USE_NTFS3`,variable,`1`,Enable NTFS3 on both initrd and vold. Unset to disable., Basically 2 options above combined.
