@@ -38,15 +38,16 @@ The pseudo fstab file itself is an actual Linux/Android fstab file, with some ad
 
 The file is a text file represents a table, with the following columns:
 
-| Column | Description | Caution | Required for file mapping and directory binding |
+| Column | Description | Condition | Required for file mapping and directory binding |
 | --- | --- | --- | --- |
 | `<src>` | Source file/directory/partition | Must be absolute path | ✅ Yes |
 | `<mnt_point>` | Target or mount point | Must be absolute path | ✅ Yes |
 | `<type>` | Filesystem type | Linux supported filesystems only | 🚫 Case-dependent |
 | `<mnt_flags and options>` | Mount flags and options | Similar to using `mount -o`| 🚫 Case-dependent |
-| `<fs_mgr_flags>` | Android filesystem manager flags | vold-specific flags | 🚫 Case-dependent |
+| `<fs_mgr_flags>` | Android filesystem manager flags | [vold-specific](https://source.android.com/docs/core/storage/config) flags | 🚫 Case-dependent |
 
-> "🚫 Case-dependent" fields are required **only** if the file being mapped is a R/W mountable disk image file (`.img`) or a partition. For partition mounting, all fields are required.
+!!!warning
+	"🚫 Case-dependent" fields are required **only** if the file being mapped is a R/W mountable disk image file (`.img`) or a partition. For partition mounting, all fields are required.
 
 !!!info
 
@@ -58,7 +59,8 @@ We've defined some special mount targets (`<mnt_point>`) for file mapping and di
 
 {{ read_csv('assets/csv/fstab_mapper.csv') }}
 
-> You can replace `userdata` with `/data` directly if you don't want vold to handle your data.img or userdata partition, in that situation, all column fields are required.
+!!!info
+	You can replace `userdata` with `/data` directly if you don't want vold to handle your data.img or userdata partition, in that situation, all column fields are required.
 
 ### Variables
 
@@ -66,4 +68,5 @@ We provide variables to simplify the syntax and automate the mapping/binding tas
 
 {{ read_csv('assets/csv/fstab_vars.csv') }}
 
-> For example: `SRC` is `/BlissOS16` and slot suffix is `_a` then `$FS/system$SLOT.img` will become `/BlissOS16/system_a.img`.
+!!!info 
+	For example: `SRC` is `/BlissOS16` and slot suffix is `_a` then `$FS/system$SLOT.img` will become `/BlissOS16/system_a.img`.
