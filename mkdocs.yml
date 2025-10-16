@@ -17,7 +17,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   font:
-    text: Noto Sans
+    text: Figtree
     code: Noto Sans Mono
   icon:
     logo: blissos
