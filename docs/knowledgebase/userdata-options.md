@@ -41,4 +41,4 @@ With these advantages, `data` directory usually being used internally by us the 
 
 ## Using ramdisk as userdata
 
-This option basically stores your data into RAM, and will not save your data after you reboot/power off the device. It does not have any advantages like those above & it's only being used on Live Mode.
+This option basically stores your data into RAM, and will not save your data after you reboot/power off the device. It does not have any advantages like those above & it's only being used on Live Mode or when your root partition is read-only.
