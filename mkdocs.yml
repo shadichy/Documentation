@@ -80,6 +80,7 @@ nav:
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
       - Compatibility List: knowledgebase/compatibility-list.md
+      - Pseudo filesystem table: configuration/pseudo-filesystem-table.md
       - Userdata options: knowledgebase/userdata-options.md
       - BlissOS' kernel parameters cheat sheets: knowledgebase/kernel-parameters-cheat-sheet.md
   - Development:
