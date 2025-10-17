@@ -22,8 +22,8 @@ Our journey began over a decade ago with Android 7.1, and we remain dedicated to
 
 To start, first you need to know about the [hardware requirement](knowledgebase/hardware-requirement.md) to be able to run the OS.
 
-Once you know your hardware is compatible, head over to the [installation section](/installation) and choose your preferred method. For beginners, creating an installation media is a great choice.  
+Once you know your hardware is compatible, head over to the [installation section](installation/README.md) and choose your preferred method. For beginners, creating an installation media is a great choice.  
 
-If you see different variants on our site (Generic, Surface, Go, Zenith) and wonder which one you need, check out [this page](knowledgebase/other-bliss-variant) for a detailed breakdown.
+If you see different variants on our site (Generic, Surface, Go, Zenith) and wonder which one you need, check out [this page](./knowledgebase/other-bliss-variant/README.md) for a detailed breakdown.
 
-You may have some questions and some of them might be on the [FAQs page](faq).
+You may have some questions and some of them might be on the [FAQs page](faq.md).

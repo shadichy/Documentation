@@ -58,7 +58,7 @@ The file is a text file represents a table, with the following columns:
 
 We've defined some special mount targets (`<mnt_point>`) for file mapping and directory binding, representing standard Android block devices:
 
-{{ read_csv('assets/csv/fstab/mapper.csv') }}
+{{ read_csv('../assets/csv/fstab/mapper.csv') }}
 
 !!!info
 	You can replace `userdata` with `/data` directly if you don't want vold to handle your data.img or userdata partition, in that situation, all column fields are required.
@@ -67,7 +67,7 @@ We've defined some special mount targets (`<mnt_point>`) for file mapping and di
 
 We provide variables to simplify the syntax and automate the mapping/binding tasks. Variables start with an `$` prefix. Please refer to the following table for variable information:
 
-{{ read_csv('assets/csv/fstab/vars.csv') }}
+{{ read_csv('../assets/csv/fstab/vars.csv') }}
 
 !!!info 
 	For example: `SRC` is `/BlissOS16` and slot suffix is `_a` then `$FS/system$SLOT.img` will become `/BlissOS16/system_a.img`.

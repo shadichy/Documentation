@@ -7,7 +7,7 @@ If you are using [rEFInd Boot Manager](https://www.rodsbooks.com/refind/), this 
 
 ## Preparation
 - A device with rEFInd installed.
-- BlissOS installation prepared using [The basics](/installation/manual/the-basics) or [Bootable Installer with no bootloader chosen](/installation/auto/bootable-installer/#select-bootloader).
+- BlissOS installation prepared using [The basics](the-basics.md) or [Bootable Installer with no bootloader chosen](../auto/bootable-installer.md#select-bootloader).
 
 ## Writing a custom configuration file
 
@@ -26,7 +26,7 @@ menuentry "BlissOS" {
 
 Replace `<src>` with the path to the BlissOS deployment directory, relative to the root directory of the partition mountpoint, replace `<kernel_params>` with your kernel parameters, and `<your_partition_identifier>` with the partition UUID (`partuuid`) or label (`partlabel`) of the partition you deploy BlissOS on.
 
-If you don't know which kernel parameter to set, please refer to [BlissOS' kernel parameters cheat sheets](/knowledgebase/kernel-parameters-cheat-sheet).
+If you don't know which kernel parameter to set, please refer to [BlissOS' kernel parameters cheat sheets](../../knowledgebase/kernel-parameters-cheat-sheet.md).
 
 !!!info
     If you don't know your `partuuid` or `partlabel`, use a 3rd-party partition manager or look up `/dev/disk/by-partuuid` or `/dev/disk/by-partlabel` or use `blkid` if you are using Linux.
@@ -65,7 +65,7 @@ menuentry "BlissOS" {
 }
 ```
 
-If you set up [AB-mode](/manual/the-basics/#for-ab-mode-deployment), change `/kernel` to `/kernel_a`, `/initrd.img` to `/initrd_a.img` and append `androidboot.slot_suffix=_a androidboot.mode=normal androidboot.bootctrl_bootcfg=/boot/efi/EFI/rEFInd/blissos.conf` to the kernel parameters (the `options` line).
+If you set up [AB-mode](../manual/the-basics.md#for-ab-mode-deployment), change `/kernel` to `/kernel_a`, `/initrd.img` to `/initrd_a.img` and append `androidboot.slot_suffix=_a androidboot.mode=normal androidboot.bootctrl_bootcfg=/boot/efi/EFI/rEFInd/blissos.conf` to the kernel parameters (the `options` line).
 
 ```sh
 menuentry "BlissOS" {

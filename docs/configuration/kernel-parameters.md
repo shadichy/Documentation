@@ -10,7 +10,7 @@ Beside inheriting all the command-line parameters that are in the linux kernel, 
 
 You can edit the command-line parameters from inside BlissOS. You'll need a terminal emulator (usually `Termux`) with root permissions (su) and a command-line based text editor to do this.
 
-> Note: See [Granting su permission](/knowledgebase/grantsu) for how to grant `su` permission to apps from KernelSU.
+> Note: See [Granting su permission](../configuration/grantsu.md) for how to grant `su` permission to apps from KernelSU.
 
 ### Using GRUB
 
@@ -23,7 +23,7 @@ For example, using `nano`:
 sudo nano /boot/grub/android.cfg
 ```
 
-![](../../../assets/cmdline_edit_grub.png){ width="500" }
+![](../assets/images/install/cmdline.png){ width="500" }
 
 
 ### Using rEFInd
@@ -37,7 +37,7 @@ For example, using `nano`:
 sudo nano /boot/efi/EFI/refind/android.conf
 ```
 
-![](../../../assets/cmdline_edit_refind.png){ width="500" }
+![](../assets/images/install/cmdline.png){ width="500" }
 
 ### Without bootloader
 

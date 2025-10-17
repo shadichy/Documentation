@@ -8,7 +8,7 @@ The new installer which is included within BlissOS bootable ISO is the new [aaro
 
 - A software to flash images to removable media (either [Rufus](https://rufus.ie/) (Windows) or [balenaEtcher](https://etcher.balena.io/))
 
-Check out [hardware requirements](../../../knowledgebase/hardware-requirement) to know how much space you need. After knowing how much space you want to set, if you want to dual-boot with a existing operating system, we recommend splitting the drive directly on your current OS to create a new partition for BlissOS. This way you won't have to spend time with the partition tools anymore.
+Check out [hardware requirements](../../knowledgebase/hardware-requirement.md) to know how much space you need. After knowing how much space you want to set, if you want to dual-boot with a existing operating system, we recommend splitting the drive directly on your current OS to create a new partition for BlissOS. This way you won't have to spend time with the partition tools anymore.
 
 On Windows you can use third-party software or internal one like [Disk Management](https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management).
 
@@ -24,15 +24,15 @@ Download the iso at [https://blissos.org](https://blissos.org) and your preferre
 
 Open Etcher, choose the iso in `Flash from file `
 
-![](../../../assets/etcher_01.png){ width="500" }
+![](../../assets/images/install/tools/etcher/01.png){ width="500" }
 
 Plug your USB or SD Card in and choose it at `Select target`
 
-![](../../../assets/etcher_02.png){ width="500" }
+![](../../assets/images/install/tools/etcher/02.png){ width="500" }
 
 Then click `Flash!` to flash the image.
 
-![](../../../assets/etcher_03.png){ width="500" }
+![](../../assets/images/install/tools/etcher/03.png){ width="500" }
 
 Once done, congrats, you now have a bootable BlissOS drive 🥳
 
@@ -40,20 +40,20 @@ Once done, congrats, you now have a bootable BlissOS drive 🥳
 
 Open Rufus, plug your USB or SD Card in and select it
 
-![](../../../assets/rufus_01.png){ width="500" }
+![](../../assets/images/install/tools/etcher/01.png){ width="500" }
 
 **SELECT** the ISO image
 
-![](../../../assets/rufus_02.png){ width="500" }
+![](../../assets/images/install/tools/etcher/02.png){ width="500" }
 
 No need to touch any other options, just click **START** <br>
 When asked to choose between `Write in ISO Mode` or `Write in DD Mode`, choose `Write in DD Mode`
 
-![](../../../assets/rufus_03.png){ width="500" }
+![](../../assets/images/install/tools/etcher/03.png){ width="500" }
 
 Rufus will ask one last time about removing all data in the USB. If you are prepared then click **OK** to start flashing
 
-![](../../../assets/rufus_04.png){ width="500" }
+![](../../assets/images/install/tools/rufus/04.png){ width="500" }
 
 Once done, congrats, you now have a bootable BlissOS drive 🥳
 
@@ -65,7 +65,7 @@ Once done, congrats, you now have a bootable BlissOS drive 🥳
 
 Reboot your PC, go to the boot menu on your device, choose the flashed BlissOS drive. You'll see the boot loader menu appear:
 
-![](../../../assets/bootmenu.png){ width="500" }
+![](../../assets/images/install/bootmenu.png){ width="500" }
 
 Move down and select `Install BlissOS` and you will enter the installation environment
 
@@ -75,7 +75,7 @@ The installation environment is a minimal Linux environment that serves [Calamar
 
 Here is a screenshot showing details about the installation environment:
 
-![](../../../assets/aaropa.png){ width="500" }
+![](../../assets/images/install/aaropa.png){ width="500" }
 
 ## Install BlissOS
 
@@ -83,7 +83,7 @@ Here is a screenshot showing details about the installation environment:
 
 As you entered the installation environment, a menu selecting bootloader will soon show up:
 
-![](../../../assets/install_chooseboot.png)
+![](../../assets/images/install/chooseboot.png)
 
 We currently support within the installation process of 2 different bootloaders, you can choose one and continue:
 
@@ -101,7 +101,7 @@ If you don't want to install any bootloader to configure it yourself, you can se
 
 Calamares will appear:
 
-![](../../../assets/install_start.png){ width="500" }
+![](../../assets/images/install/start.png){ width="500" }
 
 Click `Next`
 
@@ -109,7 +109,7 @@ Click `Next`
 
 You will see the partition screen like this:
 
-![](../../../assets/install_partition.png){ width="500" }
+![](../../assets/images/install/partition.png){ width="500" }
 
 If you have multiple drives, choose the one you want to install BlissOS in at `Select storage device`
 
@@ -120,7 +120,7 @@ There're 4 partitioning options available: `Install alongside`, `Replace a parti
 The program will automatically allocate a partition from free space and install BlissOS on it.
 This option is recommended for most cases.
 
-![](../../../assets/install_alongside.png){ width="500" }
+![](../../assets/images/install/alongside.png){ width="500" }
 
 #### Replace a partition
 
@@ -131,7 +131,7 @@ Then pick the desired partition in the lower side (and optionally, select your p
 
     `ext4` is the default and the recommend filesystem for BlissOS. If you don't know what you are doing or you just want a "just work" installation, keep `ext4` as the chosen filesystem !
 
-![](../../../assets/install_replace.png){ width="500" }
+![](../../assets/images/install/replace.png){ width="500" }
 
 And you're ready to go!
 
@@ -143,7 +143,7 @@ If you have an empty disk and want to put BlissOS in, choose this option. The pr
 
     `ext4` is the default and the recommend filesystem for BlissOS. If you don't know what you are doing or you just want a "just work" installation, keep `ext4` as the chosen filesystem !
 
-![](../../../assets/install_erase.png){ width="500" }
+![](../../assets/images/install/erase.png){ width="500" }
 
 #### Manual partitioning
 
@@ -151,65 +151,65 @@ If you have an empty disk and want to put BlissOS in, choose this option. The pr
 
 	This is for people who knows what they are doing! If you're not any familiar with Linux, you should pick the first 2 options. If you're already experienced using Calamares, please note that you're taking responsible for whatever happens with your machine once you choose to process on your own.
 
-![](../../../assets/install_manual.png){ width="500" }
+![](../../assets/images/install/manual.png){ width="500" }
 
 You should be navigated into this advanced partition dashboard like this:
 
-![](../../../assets/install_manual_main.png){ width="500" }
+![](../../assets/images/install/manual_main.png){ width="500" }
 
-The [requirements](/knowledgebase/hardware-requirement) of BlissOS include minimum 20GB of storage, so you need to `Create` a partition (or `Edit` an existing one) with more than 20GB (any filesystem, but `ext4` is recommended) and mountpoint at `/`.
+The [requirements](../../knowledgebase/hardware-requirement.md) of BlissOS include minimum 20GB of storage, so you need to `Create` a partition (or `Edit` an existing one) with more than 20GB (any filesystem, but `ext4` is recommended) and mountpoint at `/`.
 
 !!!warning
 
 	A partition with mountpoint at `/` is required for BlissOS to process the installation.
 
-![](../../../assets/install_manual_rootpart.png){ width="500" }
+![](../../assets/images/install/manual_rootpart.png){ width="500" }
 
 If you want a separated userdata partition just go on with your desired partition with mountpoint at `/data`.
 
-![](../../../assets/install_manual_datapart.png){ width="500" }
+![](../../assets/images/install/manual_datapart.png){ width="500" }
 
 !!!danger
 
 	If your machine is running on UEFI, you will need a 100MB or more FAT32 [ESP](https://en.wikipedia.org/wiki/EFI_system_partition) partition too. If it already exists, select it, `Edit`, set mountpoint to `/boot/efi`, and **DO NOT TICK ON FORMATTING**!!! This is crucial because if you do, it will override all bootloader of other OS (Windows, Mac, Linux,...). Instead, tick on `Keep`.
 
-	![](../../../assets/install_manual_espart.png){ width="500" }
+	![](../../assets/images/install/manual_espart.png){ width="500" }
 
 The final result should look like this:
 
-![](../../../assets/install_manual_result.png){ width="500" }
+![](../../assets/images/install/manual_result.png){ width="500" }
 
 !!!warning
 
     On devices using UEFI, you may see this warning
 
-	![](../../../assets/install_espwarn.png)
+	![](../../assets/images/install/espwarn.png)
 
 	If you see that your ESP still have free space (about 50MB or more), you don't have to worry about this message and can just click `OK` to ignore it.
 
 ### Create data image
 
-After you've done previous step and navigating to the next step, a dialog will appear asking whether you want to create a `data.img` file or not. This file will contain all of your user data instead of putting it in a directory. To know which option to choose, head over to [Userdata options](/knowledgebase/userdata-options).
+After you've done previous step and navigating to the next step, a dialog will appear asking whether you want to create a `data.img` file or not. This file will contain all of your user data instead of putting it in a directory. To know which option to choose, head over to [Userdata options](../../knowledgebase/userdata-options.md).
 
 !!!info
 
 	If you have no idea what this is about, just skip by clicking `No`.
 
-![](../../../assets/install_dataimg_msg.png){ width="500" }
+![](../../assets/images/install/dataimg_msg.png){ width="500" }
 
 This step allows you to customize the size of the data.img disk image. You can adjust the data.img size, or let the installer handle it by keeping `Use maximum` in check.
 
-![](../../../assets/install_dataimg.png){ width="500" }
+![](../../assets/images/install/dataimg.png){ width="500" }
 
 ### Select kernel parameters
 
 !!!info
 
-	Please refer to [BlissOS' kernel parameters cheat sheets](/knowledgebase/kernel-parameters-cheat-sheet) to know what to set. If you have no idea what this is about, just skip it.
+	Please refer to [BlissOS' kernel parameters cheat sheets](../../knowledgebase/kernel-parameters-cheat-sheet.md) to know what to set. If you have no idea what this is about, just skip it.
 
 You can expand and select (and edit) the kernel argument options. Each of the options indicates the kernel argument (with value) to be passed to the kernel when it is booting.
 
-![](../../../assets/install_cmdline.png){ width="500" }
+![](../../assets/images/install/cmdline.png){ width="500" }
 
 !!!danger
 
@@ -219,26 +219,26 @@ You can expand and select (and edit) the kernel argument options. Each of the op
 
 Once you've finished configuring the installation, click `Install` to begin the installation process.
 
-![](../../../assets/install_overview.png){ width="500" }
+![](../../assets/images/install/overview.png){ width="500" }
 
-![](../../../assets/install_process.png){ width="500" }
+![](../../assets/images/install/process.png){ width="500" }
 
 ### Finished
 
 Once the installation is complete, congrats 🥳 ! You now have BlissOS on your PC, click `Done` to finish the installation and restart the device to be able to boot into your new installation of BlissOS!
 
-![](../../../assets/install_done.png){ width="500" }
+![](../../assets/images/install/done.png){ width="500" }
 
 ## Post-installation
 
-![](../../../assets/postinst.png){ width="500" }
+![](../../assets/images/install/postinst.png){ width="500" }
 /// caption
 	attrs: {class: "inline start"}
 Screenshot of BlissOS' GRUB
 ///
 Once restarted, you will be able to see BlissOS' GRUB screen (or rEFInd, depending on wait you choose earlier), press Enter to boot into your BlissOS installation.
 
-If you have any issue with the OS, head over to [Configuration](/configuration) to learn more about how to configure the OS to suit your need.
+If you have any issue with the OS, head over to [Configuration](../../configuration/README.md) to learn more about how to configure the OS to suit your need.
 <br><br><br><br><br> <!-- someone pls doing CSS trick so I don't have to do this -->
 
 ---
@@ -246,21 +246,21 @@ If you have any issue with the OS, head over to [Configuration](/configuration) 
 ## Addendum
 ### Upgrading/Repairing BlissOS using Manual Partitioning
 
-BlissOS supports manually upgrading (or repairing) the current installation by using [Manual Partitioning](#manual-partitioning).<br>
+BlissOS supports manually upgrading (or repairing) the current installation by using [Manual Partitioning](bootable-installer.md#manual-partitioning).<br>
 Here's how to do it:
 
 - Boot into the installer and choosing the bootloader that you've chosen earlier.
-- Select [Manual Partitioning](#manual-partitioning)
+- Select [Manual Partitioning](bootable-installer.md#manual-partitioning)
 - On the manual partition dashboard, `Edit` the partition that contain BlissOS, set Mount Point to `/` and select `Keep` in Content. If you are on UEFI, do the same for your [ESP](https://en.wikipedia.org/wiki/EFI_system_partition) by setting Mount Point to `/boot/efi` (and the same for `/data` if you set it earlier).
 
 !!!warning
 
 	Double-check to make sure you don't accidentally format your installation.
 
-![](../../../assets/install_manual_upgrade.png){ width="500" }
+![](../../assets/images/install/manual_upgrade.png){ width="500" }
 
-- If you use `data.img`, you don't have to recreate it in [Create data image](#create-data-image), so just press `No`.
-- Set the chosen [Kernel parameters](#select-kernel-parameters) that you've chosen previously.
+- If you use `data.img`, you don't have to recreate it in [Create data image](bootable-installer.md#create-data-image), so just press `No`.
+- Set the chosen [Kernel parameters](bootable-installer.md#select-kernel-parameters) that you've chosen previously.
 - Start the installation to upgrade/repair BlissOS.
 
 ### Getting logs if the installer failed
@@ -269,7 +269,7 @@ While we've conducted a lot testing & bug fixing for our installer, the reality 
 
 If the installer fails, open File Manager (aka *PCManFM*), go to `~/.cache/calamares/session.log` (or `/root/.cache/calamares/session.log`), open it and check the last 100 lines of the file to see what went wrong.
 
-![](../../../assets/install_getlogs.png){ width="500" }
+![](../../assets/images/install/getlogs.png){ width="500" }
 
 Once you identified the issue, here's what you can do: 
 
@@ -277,4 +277,4 @@ Once you identified the issue, here's what you can do:
 - **For VMs only**: export the logs using serial console or [VSOCK](https://man7.org/linux/man-pages/man7/vsock.7.html). This requires you have some research and not recommend for newcomers.
 - Screenshots or..... taking pictures (please take the one that we can see 😅)
 
-After you got the log, head over to our [Github Issues](/feedback/github-issue) or [Messaging Platform](/feedback/messaging) to report it.
+After you got the log, head over to our [Github Issues](../../feedback/github-issue.md) or [Messaging Platform](../../feedback/messaging.md) to report it.
