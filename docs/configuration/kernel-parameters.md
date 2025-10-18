@@ -20,7 +20,7 @@ If you installed BlissOS with GRUB, append your custom kernel parameter to end o
 For example, using `nano`:
 
 ```sh
-export PATH=/system/bin:$PATH
+/system/bin/blisspath
 su -c 'nano /boot/grub/android.cfg'
 ```
 
@@ -38,7 +38,7 @@ If you installed BlissOS with rEFInd, append your custom kernel parameter to end
 For example, using `nano`:
 
 ```sh
-export PATH=/system/bin:$PATH
+/system/bin/blisspath
 su -c 'nano /boot/efi/EFI/refind/android.conf'
 ```
 
@@ -56,7 +56,7 @@ You'll need to mount the root partition to a temporary directory (for example `/
 
 ```sh
 # Export PATH
-export PATH=/system/bin:$PATH
+/system/bin/blisspath
 
 # Install neccessary tools
 pkg i tsu blk-utils
