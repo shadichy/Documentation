@@ -54,16 +54,16 @@ The file is a text file represents a table, with the following columns:
 
 	Linking a partition to a specific path also count as a file mapping.
 
-### Special mount targets
+## Special mount targets
 
 We've defined some special mount targets (`<mnt_point>`) for file mapping and directory binding, representing standard Android block devices:
 
 {{ read_csv('../assets/csv/fstab/mapper.csv') }}
 
 !!!info
-	You can replace `userdata` with `/data` directly if you don't want vold to handle your data.img or userdata partition, in that situation, all column fields are required.
+	You can replace `userdata` with `/data` directly if you don't want vold to handle your data.img or userdata partition; in that situation, all column fields are required.
 
-### Variables
+## Variables
 
 We provide variables to simplify the syntax and automate the mapping/binding tasks. Variables start with an `$` prefix. Please refer to the following table for variable information:
 

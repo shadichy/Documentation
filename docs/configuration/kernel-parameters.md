@@ -31,10 +31,6 @@ su -c 'nano /boot/grub/android.cfg'
 
 If you installed BlissOS with rEFInd, append your custom kernel parameter to end of `options` line (inside quotes) in `/boot/efi/EFI/refind/android.conf` file.
 
-!!!info
-
-    This section is only available for uEFI machines.
-
 For example, using `nano`:
 
 ```sh
@@ -50,7 +46,7 @@ su -c 'nano /boot/efi/EFI/refind/android.conf'
 
 !!!warning
 
-    This is a little bit more complicated than any of above and can only be applied once you use `grub-android-prober`. If you setup BlissOS for any other bootloaders, or setup BlissOS boot entry yourself, you should know how to do it on your own.
+    This is a little bit more complicated than any of above and can only be applied once you use [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober). If you setup BlissOS for any other bootloaders, or setup BlissOS boot entry yourself, you should know how to do it on your own.
 
 You'll need to mount the root partition to a temporary directory (for example `/data/local/tmp`) and edit the `cmdline.txt` file in the mount point. There are multiple ways to find root partition, here's one example:
 
@@ -90,23 +86,23 @@ sudo nano /data/local/tmp/cmdline.txt
 sudo umount /data/local/tmp
 ```
 
-## Edit command-line parameters from linux
+## Edit command-line parameters from a linux distro
 
 You can edit the command-line parameters from any other linux distribution.
 
-!!!warning
+!!!danger
 
     You're editing from linux, you cannot apply any of the above methods from [Edit command-line parameters from BlissOS](kernel-parameters.md#edit-command-line-parameters-from-blissos).
 
-!!!info
+!!!warning
 
-    Since you use linux, we'd expect that you know how to mount partitions and edit files from linux. We'd also expect that you know where you installed BlissOS (your root partition).
+    Since you are using a linux distro, we'd expect that you know how to mount partitions and edit files using this system. We'd also expect that you know where your BlissOS installation is.
 
 !!!info
 
     You can also use these methods below to edit command-line parameters from [Bootable installer](../installation/auto/bootable-installer.md) environment (in case BlissOS is the only OS on your device or you just want to modify BlissOS kernel parameters right after installation).
 
-### On BlissOS with GRUB
+### For BlissOS with GRUB
 
 You must need to locate root partition of your BlissOS installation and mount it to a temporary directory (for example `/mnt`).
 
@@ -120,15 +116,11 @@ mount /dev/sdXY /mnt
 nano /mnt/boot/grub/android.cfg
 ```
 
-### On BlissOS with rEFInd
+### For BlissOS with rEFInd
 
 You must need to locate ESP (EFI system partition) and mount it (usually it's automatically mounted to `/boot/efi`). If you installed BlissOS to another disk, mount the disk's ESP to a temporary directory (for example `/mnt`).
 
 Append your custom kernel parameter to end of `options` line (inside quotes) in `/EFI/refind/android.conf` file in BlissOS root partition.
-
-!!!info
-
-    This section is only available for uEFI machines.
 
 An example using `nano` on [Bootable installer](../installation/auto/bootable-installer.md):
 
@@ -138,13 +130,13 @@ mount /dev/sdXY /mnt
 nano /mnt/EFI/refind/android.conf
 ```
 
-### On BlissOS with no bootloader
+### For BlissOS with no bootloader
 
 !!!warning
 
-    As mentioned above for BlissOS without bootloader, this applies only if you are using `grub-android-prober`.
+    As mentioned in [Edit parameters from BlissOS without bootloader](#without-bootloader), this applies only if you are using [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober).
     If you setup BlissOS for any other bootloaders, or setup BlissOS boot entry yourself, you should know how to modify BlissOS kernel parameters on your own.
-    We are not responsible for any of your actions with your manually setup BlissOS.
+    We are not responsible for any of your actions with your manual setup of BlissOS.
 
 Mount BlissOS root partition to a temporary directory (for example `/mnt`).
 
