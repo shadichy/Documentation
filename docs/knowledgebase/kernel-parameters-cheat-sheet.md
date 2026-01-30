@@ -1,6 +1,6 @@
 # BlissOS' kernel parameters cheat sheets
 
-As BlissOS is using linux kernel, it can inherit all of the [kernel's command-line parameters](https://docs.kernel.org/admin-guide/kernel-parameters.html) available plus some extra parameters to set variables for some of BlissOS init scripts. This part will list all of the custom parameters that BlissOS is using with some extra one from the linux kernel.
+As BlissOS is using Linux kernel, it can inherit all of the [kernel's command-line parameters](https://docs.kernel.org/admin-guide/kernel-parameters.html) available plus some extra parameters to set variables for some of BlissOS init scripts. This part will list all of the custom parameters that BlissOS is using with some extra one from the Linux kernel.
 
 If you want to know how to set these, check out [Setup kernel's command-line parameters](../configuration/kernel-parameters.md).
 

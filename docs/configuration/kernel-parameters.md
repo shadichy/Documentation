@@ -4,7 +4,7 @@ order: 4
 
 # Setup kernel's command-line parameters
 
-Beside inheriting all the command-line parameters that are in the linux kernel, BlissOS also utilize kernel parameters to set variables for some of our init scripts. This part will show you how to set it.
+Beside inheriting all the command-line parameters that are in the Linux kernel, BlissOS also utilize kernel parameters to set variables for some of our init scripts. This part will show you how to set it.
 
 ## Edit command-line parameters from BlissOS
 
@@ -86,17 +86,17 @@ sudo nano /data/local/tmp/cmdline.txt
 sudo umount /data/local/tmp
 ```
 
-## Edit command-line parameters from a linux distro
+## Edit command-line parameters from a Linux distro
 
-You can edit the command-line parameters from any other linux distribution.
+You can edit the command-line parameters from any other Linux distribution.
 
 !!!danger
 
-    You're editing from linux, you cannot apply any of the above methods from [Edit command-line parameters from BlissOS](kernel-parameters.md#edit-command-line-parameters-from-blissos).
+    You're editing from a Linux distro, you cannot apply any of the above methods from [Edit command-line parameters from BlissOS](kernel-parameters.md#edit-command-line-parameters-from-blissos).
 
 !!!warning
 
-    Since you are using a linux distro, we'd expect that you know how to mount partitions and edit files using this system. We'd also expect that you know where your BlissOS installation is.
+    Since you are using a Linux distro, we'd expect that you know how to mount partitions and edit files using this system. We'd also expect that you know where your BlissOS installation is.
 
 !!!info
 

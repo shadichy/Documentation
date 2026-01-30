@@ -3,7 +3,7 @@
 If you install linux on your device, chances are you are using [GRUB2](https://www.gnu.org/software/grub/manual/grub/grub.html) to boot the OS. In this section, we will show you how to setup GRUB2 on Linux to dual-boot BlissOS with it.
 
 !!!Warning
-	This section was made using GRUB2 on [Debian 13](https://wiki.debian.org/GRUB2) with UEFI in mind! For every other linux distribution, find it's document about GRUB2 to learn how to add and apply custom entries for the bootloader !
+	This section was made using GRUB2 on [Debian 13](https://wiki.debian.org/GRUB2) with UEFI in mind! For every other Linux distribution, find it's document about GRUB2 to learn how to add and apply custom entries for the bootloader !
 
 	[Arch Linux](https://wiki.archlinux.org/title/GRUB) <br>
 	[Fedora](https://fedoraproject.org/wiki/GRUB_2) <br>
@@ -126,5 +126,5 @@ Once you got GRUB2 setup, reboot the device. You will be able to see BlissOS ent
 If everything works correctly then congrats 🥳.
 
 !!!danger
-	If you are using [AB-mode](../manual/the-basics.md#for-ab-mode-deployment), please be cautious that sometimes when updating packages will reload GRUB2 configuration, which will reset the current slot of your BlissOS to slot A. If you are on slot B, sudden slot changing might accidentally downgrade the OS and can cause issues. We advise you to look at the `grub.cfg` file to double check whenever you're done with a linux update!
+	If you are using [AB-mode](../manual/the-basics.md#for-ab-mode-deployment), please be cautious that sometimes when updating packages will reload GRUB2 configuration, which will reset the current slot of your BlissOS to slot A. If you are on slot B, sudden slot changing might accidentally downgrade the OS and can cause issues. We advise you to look at the `grub.cfg` file to double check whenever you're done with a Linux update!
 
