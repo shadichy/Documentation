@@ -8,4 +8,4 @@ While this build indicate that this is for Surface devices, not all devices need
 
 If you see your device has the number that said `Requires linux-surface kernel` or `Requires linux-surface kernel >=x.x.x` then this is the build you are looking for.
 
-The Surface build of BlissOS also include `iptsd`, an userspace touch processing daemon for Microsoft Surface devices using Intel Precise Touch technology made by linux-surface team. If you have any issue with the touchscreen, try to Calibrate or tweak the daemon. Go to [Calibrate and configure iptsd](/configuration/Calibrate-and-configure-iptsd) to know how.
+The Surface build of BlissOS also include `iptsd`, an userspace touch processing daemon for Microsoft Surface devices using Intel Precise Touch technology made by linux-surface team. If you have any issue with the touchscreen, try to Calibrate or tweak the daemon. Go to [Calibrate and configure iptsd](../../configuration/calibrate-configure-iptsd.md) to know how.

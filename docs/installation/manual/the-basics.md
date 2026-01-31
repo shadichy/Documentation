@@ -6,7 +6,7 @@ Understanding the basics of what to do & what to prepare before starting manual 
 
 You'll need these following:
 
-- A 20+ GB storage partition (as stated in [Hardware Requirement](/knowledgebase/hardware-requirement))
+- A 20+ GB storage partition (as stated in [Hardware Requirement](../../knowledgebase/hardware-requirement.md))
 - A working Linux environment 
 
 !!! Info
@@ -18,7 +18,7 @@ You'll need these following:
 
 If you are using Linux with a supported filesystem and ***unencrypted***, you can create a directory at `/` and putting BlissOS on it. For example, you can create `/blissos` like this
 
-![](../../../assets/manual_install_linuxdir.png){ width="500" }
+![](../../assets/images/manual/linuxdir.png){ width="500" }
 
 Otherwise, you can create a separate partition with supported filesystem.
 
@@ -60,7 +60,7 @@ Just need to copy the files from BlissOS .iso to where you want to put BlissOS i
 In this mode, your BlissOS can be updated using internal updater (OTA-ready) or from .iso image.
 
 !!!info "Did you know ?"
-	You can setup proper AB-mode into an empty partition using our [bootable installer](/installation/auto/bootable-installer) ! When choosing Bootloaders, just pick [None](/installation/auto/bootable-installer/#select-bootloader).
+	You can setup proper AB-mode into an empty partition using our [bootable installer](../auto/bootable-installer.md) ! When choosing Bootloaders, just pick [None](../auto/bootable-installer.md#select-bootloader).
 
 First, copy the files from BlissOS .iso to where you want to put BlissOS in, rename `ramdisk-recovery.img` to `recovery.img`.
 
@@ -118,7 +118,7 @@ dd if=/dev/zero of=misc.img bs=1M count=10
 All the commands must be run in the same directory as the BlissOS deployment. <br>
 Once done, your files should look like this
 
-![](../../../assets/manual_install_imgsize.png)
+![](../../assets/images/manual/imgsize.png)
 
 ## Data image
 
@@ -142,7 +142,7 @@ All the commands must be run in the same directory as the BlissOS deployment.
 
 ## Making a custom fstab
 
-You will need to create a `fstab.android` file in the same place you put BlissOS in. To know how to create this file, check out [Pseudo filesystem table](/configuration/pseudo-filesystem-table)
+You will need to create a `fstab.android` file in the same place you put BlissOS in. To know how to create this file, check out [Pseudo filesystem table](../../configuration/pseudo-filesystem-table.md)
 
 ## Bootloader setup
 
@@ -170,7 +170,7 @@ initrd <where_is_your_initrd_img>
 
 `<where_is_your_kernel>` and `where_is_your_initrd_img` are the location of your BlissOS' `kernel` and `initrd.img` , `<which_cmdline_to_set>` is the custom kernel parameter that you want to set. 
 
-If you don't know which kernel parameter to set, please refer to [BlissOS' kernel parameters cheat sheets](/knowledgebase/kernel-parameters-cheat-sheet).
+If you don't know which kernel parameter to set, please refer to [BlissOS' kernel parameters cheat sheets](../../knowledgebase/kernel-parameters-cheat-sheet.md).
 
 !!!danger
 
@@ -180,7 +180,7 @@ If you don't know which kernel parameter to set, please refer to [BlissOS' kerne
 
 	- `androidboot.slot_suffix=_a`: For setting slot suffix (`_a` or `_b`).
 	- `androidboot.mode=normal`: For setting boot mode (`normal` or `recovery`).
-	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (Refer to [Boot configuration file path](/knowledgebase/kernel-parameters-cheat-sheet#set-boot-configuration-file-path)).
+	- `androidboot.bootctrl_bootcfg=/path/to/boot_config_file`: For setting boot configuration file (Refer to [Boot configuration file path](../../knowledgebase/kernel-parameters-cheat-sheet.md#booting-startup)).
 
 With these information, your custom entry should look like this:
 
@@ -206,7 +206,7 @@ initrd /initrd_a.img
 options SRC=/ androidboot.slot_suffix=_a androidboot.mode=normal androidboot.bootctrl_bootcfg=/boot/my_bt/custom.conf intel_idle.max_cstate=2 syscall_hardening=off
 ```
 
-We also provide [Recovery Mode](/configuration/recovery). To add an extra entry for it, copy the entry above but change/add `androidboot.mode=recovery`
+We also provide [Recovery Mode](../../configuration/recovery.md). To add an extra entry for it, copy the entry above but change/add `androidboot.mode=recovery`
 
 ```
 linux /kernel

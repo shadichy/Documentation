@@ -1,0 +1,9 @@
+## Ignore mkdocs build artifacts and caches
+site/
+.cache/
+.sass-cache/
+
+# Common OS/editor files
+.DS_Store
+*.swp
+__pycache__/

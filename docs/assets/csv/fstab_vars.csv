@@ -1,3 +1,0 @@
-﻿Variable,Values,Description
-$SLOT,Parsed from kernel parameter `androidboot.slot_suffix` (`_a` or `_b`),Slot suffix
-$FS,Parsed from kernel parameter `SRC`,Path to directory you installed BlissOS to (filesystem absolute path or relative to the root directory of the partition mountpoint)

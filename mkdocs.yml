@@ -3,7 +3,7 @@ repo_name: BlissOS/Documentation
 repo_url: https://github.com/BlissRoms-x86/Documentation
 theme:
   name: material
-  favicon: assets/favicon.png
+  favicon: assets/images/favicon.png
   custom_dir: assets_main
   palette:
     - scheme: blisslight
@@ -71,6 +71,8 @@ nav:
       - Preparing a Virtual Machine: configuration/vm-setup.md
       - Pseudo fstab: configuration/pseudo-filesystem-table.md
       - Setup kernel's cmdline parameters: configuration/kernel-parameters.md
+      - Recovery Mode: configuration/recovery.md
+      - Granting super user permission: configuration/grantsu.md
   - Knowledgebase:
       - knowledgebase/README.md
       - Hardware Requirements: knowledgebase/hardware-requirement.md
@@ -80,6 +82,7 @@ nav:
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
       - Compatibility List: knowledgebase/compatibility-list.md
+      - Pseudo filesystem table: knowledgebase/pseudo-filesystem-table.md
       - Userdata options: knowledgebase/userdata-options.md
       - BlissOS' kernel parameters cheat sheets: knowledgebase/kernel-parameters-cheat-sheet.md
   - Development:

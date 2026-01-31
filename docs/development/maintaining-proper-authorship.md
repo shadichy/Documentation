@@ -30,7 +30,7 @@ The process is fairly simple yet important to understand.
 
 If you are cherry-picking commits, the authorship information is transferred automatically. Provided that you are running `git cherry-pick`, the entire commit information, down to when the commit was created, is picked into your repository. You don't have to do anything in this case.
 
-If you are committing someone else's code yourself, then you must manually specify who the author is. There are a lot of reasons why you would do this, from merge issues to incompatible code with the existing codebase. To manually specify an author, follow the [Manually specifying an author section below](#manually-specifying-an-author).
+If you are committing someone else's code yourself, then you must manually specify who the author is. There are a lot of reasons why you would do this, from merge issues to incompatible code with the existing codebase. To manually specify an author, follow the [Manually specifying an author section below](maintaining-proper-authorship.md#manually-specifying-an-author).
 
 Finally, do NOT squash a range of commits that are not your own. This completely wipes authorship information from the range of commits and causes a massive headache for other developers.
 
