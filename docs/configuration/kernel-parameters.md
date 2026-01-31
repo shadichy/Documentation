@@ -4,7 +4,7 @@ order: 4
 
 # Setup kernel's command-line parameters
 
-Beside inheriting all the command-line parameters that are in the Linux kernel, BlissOS also utilize kernel parameters to set variables for some of our init scripts. This part will show you how to set it.
+Beside inheriting all the [command-line parameters](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) that are in the Linux kernel, BlissOS also utilize kernel parameters to set variables for some of our init scripts. This part will show you how to set it.
 
 ## Edit command-line parameters from BlissOS
 
@@ -48,7 +48,7 @@ su -c 'nano /boot/efi/EFI/refind/android.conf'
 
     This is a little bit more complicated than any of above and can only be applied once you use [grub-android-prober](https://github.com/Ananda-Aropa/grub-android-prober). If you setup BlissOS for any other bootloaders, or setup BlissOS boot entry yourself, you should know how to do it on your own.
 
-You'll need to mount the root partition to a temporary directory (for example `/data/local/tmp`) and edit the `cmdline.txt` file in the mount point. There are multiple ways to find root partition, here's one example:
+You'll need to mount the root partition to a temporary directory (for example `/data/local/tmp`) and edit the `cmdline.txt` file in the mount point. There are multiple ways to find root partition, here's one example using Termux:
 
 ```sh
 # Export PATH
@@ -116,6 +116,8 @@ mount /dev/sdXY /mnt
 nano /mnt/boot/grub/android.cfg
 ```
 
+![](../assets/images/install/cmdline.png){ width="500" }
+
 ### For BlissOS with rEFInd
 
 You must need to locate ESP (EFI system partition) and mount it (usually it's automatically mounted to `/boot/efi`). If you installed BlissOS to another disk, mount the disk's ESP to a temporary directory (for example `/mnt`).
@@ -129,6 +131,8 @@ An example using `nano` on [Bootable installer](../installation/auto/bootable-in
 mount /dev/sdXY /mnt
 nano /mnt/EFI/refind/android.conf
 ```
+
+![](../assets/images/install/cmdline.png){ width="500" }
 
 ### For BlissOS with no bootloader
 
