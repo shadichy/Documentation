@@ -67,12 +67,27 @@ nav:
       - Install on a Virtual Machine: installation/vm.md
   - Configuration:
       - configuration/README.md
-      - Calibrate and configure iptsd: configuration/calibrate-configure-iptsd.md
+      - Audio: configuration/audio.md
+      - Display: configuration/display.md
+      - Graphics:
+        - configuration/graphics/README.md
+        - DriConf: configuration/graphics/driconf.md
+        - Intel GPUs: configuration/graphics/intel.md
+        - AMD GPUs: configuration/graphics/amd-radeon.md
+        - Nvidia GPUs: configuration/graphics/nvidia.md
+        - VirGL: configuration/graphics/virtio.md
+        - VMWare SVGA: configuration/graphics/vmware.md
+      - Media codecs: configuration/media-codecs.md
+      - Sensors: configuration/sensors.md
+      - Touchscreen:
+        - Calibrate and configure iptsd: configuration/touchscreens/calibrate-configure-iptsd.md
+        - Calibrate and configure silead touchscreens: configuration/touchscreens/calibrate-configure-silead.md
+      - Grant superuser permission or debug shell: configuration/grantsu.md
       - Preparing a Virtual Machine: configuration/vm-setup.md
       - Pseudo fstab: configuration/pseudo-filesystem-table.md
       - Setup kernel's cmdline parameters: configuration/kernel-parameters.md
       - Recovery Mode: configuration/recovery.md
-      - Granting super user permission: configuration/grantsu.md
+      - Making Panda/Mantis keymapper work: configuration/arm-keymapper-hack.md
   - Knowledgebase:
       - knowledgebase/README.md
       - Hardware Requirements: knowledgebase/hardware-requirement.md
@@ -81,15 +96,18 @@ nav:
           - BlissOS Go: knowledgebase/other-bliss-variant/go-builds.md
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
+      - Difference with BlissRoms: knowledgebase/difference-with-blissroms.md
       - Compatibility List: knowledgebase/compatibility-list.md
       - Pseudo filesystem table: knowledgebase/pseudo-filesystem-table.md
       - Userdata options: knowledgebase/userdata-options.md
       - BlissOS' kernel parameters cheat sheets: knowledgebase/kernel-parameters-cheat-sheet.md
+      - External resources: knowledgebase/external-resources.md
   - Development:
       - development/README.md
       - Maintaining Proper Authorship: development/maintaining-proper-authorship.md
       - Obtain the Source Code: development/obatain-source-and-build.md
       - Porting Linux Drivers: development/porting-linux-drivers.md
+      - Contribute to the Documentation: development/contribute-to-the-documentation.md
   - Feedback:
       - feedback/README.md
       - Github Issues: feedback/github-issue.md

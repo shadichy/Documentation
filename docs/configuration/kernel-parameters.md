@@ -11,7 +11,7 @@ Beside inheriting all the [command-line parameters](https://www.kernel.org/doc/h
 You can edit the command-line parameters from inside BlissOS. You'll need a terminal emulator with root permissions (su) and a command-line based text editor to do this.
 Since Termux, KernelSU and nano are available in BlissOS, we'll use them for these examples below.
 
-> Note: See [Granting su permission](../configuration/grantsu.md) for how to grant `su` permission to apps from KernelSU.
+> Note: See [Grant superuser permission or debug shell](../grantsu) for how to grant `su` permission to apps from KernelSU.
 
 ### Using GRUB
 
