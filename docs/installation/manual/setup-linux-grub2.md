@@ -29,10 +29,10 @@ sudo update-grub
 !!!info
 	`grub-android-prober` also supports Arch Linux. Or if you don't use one of these two distributions, check [Quick Install](https://github.com/Ananda-Aropa/grub-android-prober?tab=readme-ov-file#quick-install) to learn how to install it.
 
-Additionally, if you want to add custom kernel parameters, create a file called `cmdline.txt` in the same place where you put BlissOS in. In `cmdline.txt`, add:
+Additionally, if you want to add custom kernel parameters, create a file called `cmdline.txt` in the same place where you put BlissOS in. In `cmdline.txt`, add your custom kernel parameters, for example:
 
 ```
-cmdline="<your_parameters_here>"
+quiet androidboot.insecure_adb=1 androidboot.enable_console=1
 ```
 
 If you don't know which kernel parameter to set, please refer to [BlissOS' kernel parameters cheat sheets](../../knowledgebase/kernel-parameters-cheat-sheet.md).
@@ -40,10 +40,12 @@ If you don't know which kernel parameter to set, please refer to [BlissOS' kerne
 !!!warning
 	For those who set up AB-Mode, append `cmdline="androidboot.slot_suffix=_a androidboot.mode=normal"` (to set slot to A and boot mode to normal) to the `/boot/ab.env.cfg` file in the deployment directory (create the file if it's not present), append `androidboot.bootctrl_bootcfg=/boot/ab.env.cfg` to the `cmdline.txt` file.
 
-Once done, reload GRUB2 configuration and you're good to go !
+Once done, regenerate GRUB2 configuration and you're good to go !
 
-```
+```sh
 sudo update-grub
+# or
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Manually writing configuration
