@@ -97,11 +97,12 @@ nav:
           - BlissOS for Surface devices: knowledgebase/other-bliss-variant/surface-builds.md
           - BlissOS Zenith: knowledgebase/other-bliss-variant/zenith-builds.md
       - Difference with BlissRoms: knowledgebase/difference-with-blissroms.md
-      - Compatibility List: knowledgebase/compatibility-list.md
+      - Graphics options explanation: knowledgebase/graphics-explain.md
       - Pseudo filesystem table: knowledgebase/pseudo-filesystem-table.md
       - Userdata options: knowledgebase/userdata-options.md
       - BlissOS' kernel parameters cheat sheets: knowledgebase/kernel-parameters-cheat-sheet.md
       - External resources: knowledgebase/external-resources.md
+      - Compatibility List: knowledgebase/compatibility-list.md
   - Development:
       - development/README.md
       - Maintaining Proper Authorship: development/maintaining-proper-authorship.md
