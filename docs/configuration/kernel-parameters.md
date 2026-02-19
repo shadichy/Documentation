@@ -24,7 +24,7 @@ For example, using `nano`:
 su -c 'nano /boot/grub/android.cfg'
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_grub_termux.png){ width="500" }
 
 
 ### Using rEFInd
@@ -38,7 +38,7 @@ For example, using `nano`:
 su -c 'nano /boot/efi/EFI/refind/android.conf'
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_refind_termux.png){ width="500" }
 
 ### Without bootloader
 
@@ -116,7 +116,7 @@ mount /dev/sdXY /mnt
 nano /mnt/boot/grub/android.cfg
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_grub_linux.png){ width="500" }
 
 ### For BlissOS with rEFInd
 
@@ -132,7 +132,7 @@ mount /dev/sdXY /mnt
 nano /mnt/EFI/refind/android.conf
 ```
 
-![](../assets/images/install/cmdline.png){ width="500" }
+![](../assets/images/manual/edit_conf_refind_linux.png){ width="500" }
 
 ### For BlissOS with no bootloader
 
