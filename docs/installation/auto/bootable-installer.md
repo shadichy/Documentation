@@ -6,7 +6,7 @@ The new installer which is included within BlissOS bootable ISO is the new [aaro
 
 - An USB drive or an SD card (minimum 4GB)
 
-- A software to flash images to removable media (either [Rufus](https://rufus.ie/) (Windows) or [balenaEtcher](https://etcher.balena.io/))
+- A software to flash images to removable media ([Rufus](https://rufus.ie/) (Windows), [balenaEtcher](https://etcher.balena.io/), [Ventoy](https://ventoy.net/))
 
 Check out [hardware requirements](../../knowledgebase/hardware-requirement.md) to know how much space you need. After knowing how much space you want to set, if you want to dual-boot with a existing operating system, we recommend splitting the drive directly on your current OS to create a new partition for BlissOS. This way you won't have to spend time with the partition tools anymore.
 
@@ -40,22 +40,42 @@ Once done, congrats, you now have a bootable BlissOS drive 🥳
 
 Open Rufus, plug your USB or SD Card in and select it
 
-![](../../assets/images/install/tools/etcher/01.png){ width="500" }
+![](../../assets/images/install/tools/rufus/01.png){ width="500" }
 
 **SELECT** the ISO image
 
-![](../../assets/images/install/tools/etcher/02.png){ width="500" }
+![](../../assets/images/install/tools/rufus/02.png){ width="500" }
 
 No need to touch any other options, just click **START** <br>
-When asked to choose between `Write in ISO Mode` or `Write in DD Mode`, choose `Write in DD Mode`
+When asked to choose between `Write in ISO Mode` or `Write in DD Mode`, choose whatever. Both works.
 
-![](../../assets/images/install/tools/etcher/03.png){ width="500" }
+![](../../assets/images/install/tools/rufus/03.png){ width="500" }
+
+!!!info
+
+		When you select `Write in ISO Mode`, Rufus will ask you whether you want to get latest GRUB2 or builtin. Both works if you downloaded latest Rufus.
 
 Rufus will ask one last time about removing all data in the USB. If you are prepared then click **OK** to start flashing
 
 ![](../../assets/images/install/tools/rufus/04.png){ width="500" }
 
 Once done, congrats, you now have a bootable BlissOS drive 🥳
+
+### Using Ventoy
+
+Open Ventoy, plug your USB or SD Card in and select it
+
+![](../../assets/images/install/tools/ventoy/01.png){ width="500" }
+
+Press **Install** or **Update**. It will then ask you (twice) to remove all data in the USB. If you are prepared then click **OK** to start flashing.
+
+![](../../assets/images/install/tools/ventoy/02.png){ width="500" }
+
+Open the drive ***Ventoy*** on file manager, copy the ISO to the drive.
+
+![](../../assets/images/install/tools/ventoy/03.png){ width="500" }
+
+Once done, congrats, you now have a bootable drive with BlissOS 🥳
 
 ## Boot into the installer
 
