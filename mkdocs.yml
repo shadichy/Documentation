@@ -24,7 +24,9 @@ theme:
     annotation: material/plus-circle
   features:
     - navigation.indexes
+    - navigation.tabs
     - navigation.top
+    - navigation.path
     - toc.integrate
     - content.code.copy
     - content.code.annotate
