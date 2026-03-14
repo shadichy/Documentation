@@ -53,7 +53,7 @@ When asked to choose between `Write in ISO Mode` or `Write in DD Mode`, choose w
 
 !!!info
 
-		When you select `Write in ISO Mode`, Rufus will ask you whether you want to get latest GRUB2 or builtin. Both works if you downloaded latest Rufus.
+	When you select `Write in ISO Mode`, Rufus will ask you whether you want to get latest GRUB2 or builtin. Both works if you downloaded latest Rufus.
 
 Rufus will ask one last time about removing all data in the USB. If you are prepared then click **OK** to start flashing
 
@@ -63,7 +63,11 @@ Once done, congrats, you now have a bootable BlissOS drive 🥳
 
 ### Using Ventoy
 
-Open Ventoy, plug your USB or SD Card in and select it
+!!!warning
+
+	In this tutorial, we'll assume that you've downloaded `Ventoy2Disk` into your PC and using GUI mode. If not, check out [Ventoy's website](https://www.ventoy.net/en/index.html) for Downloads and Documents.
+
+Open Ventoy2Disk, plug your USB or SD Card in and select it
 
 ![](../../assets/images/install/tools/ventoy/01.png){ width="500" }
 
@@ -75,7 +79,7 @@ Open the drive ***Ventoy*** on file manager, copy the ISO to the drive.
 
 ![](../../assets/images/install/tools/ventoy/03.png){ width="500" }
 
-Once done, congrats, you now have a bootable drive with BlissOS 🥳
+Once done, congrats, you now have a bootable drive with Ventoy & BlissOS 🥳
 
 ## Boot into the installer
 
