@@ -12,6 +12,11 @@ You'll need these following:
 !!! Info
 	If you only have Windows, ensure that at least you have [dd](https://www.msys2.org/), [erofs-utils](https://github.com/sekaiacg/erofs-utils) (or [squashfs-tools](https://infraroot.at/pub/squashfs/windows/), depends on the system.efs/sfs inside the iso, [7zip-zstd](https://github.com/mcmilk/7-Zip-zstd) can also be used for `system.sfs`) with a Linux filesystem driver and toolchain ([WinBtrfs](https://github.com/maharmstone/btrfs), [Ext4Fsd](https://github.com/bobranten/Ext4Fsd), 3rd-party partition manager, etc) or just get WSL2 installed. These will be used to extract/create required files for BlissOS.
 
+- A bootloader/boot manager that supports booting sparse images (both kernel & initrd)
+
+!!! Warning
+	
+
 - A BlissOS .iso image (duh)
 
 ## Setting up place to put BlissOS in
