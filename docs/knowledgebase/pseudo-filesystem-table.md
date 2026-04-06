@@ -33,6 +33,12 @@ none                    /sys/firmware/efi/efivars    efivarfs  defaults         
 
 ```
 
+!!!danger 
+	Please check your editor is editing `fstab.android` with `LF` EOL sequence instead of `CRLF`. If you accidentally use `CRLF` your fstab will not be able to work with our initrd. <br>
+	EOL sequence can usually be seen on the bottom bar of the editor, for example on Visual Studio Code:
+
+	![](../assets/images/knowledgebase/LF_fstab.png)
+
 ## Syntax
 
 The pseudo fstab file itself is an actual Linux/Android fstab file, with some additional modifications in syntax for extra support for file mapping and directory binding.
