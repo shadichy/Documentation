@@ -69,15 +69,15 @@ nav:
   - Configuration:
       - configuration/README.md
       - Audio: configuration/audio.md
-      - Display: configuration/display.md
-      - Graphics:
-        - configuration/graphics/README.md
-        - DriConf: configuration/graphics/driconf.md
-        - Intel GPUs: configuration/graphics/intel.md
-        - AMD GPUs: configuration/graphics/amd-radeon.md
-        - Nvidia GPUs: configuration/graphics/nvidia.md
-        - VirGL: configuration/graphics/virtio.md
-        - VMWare SVGA: configuration/graphics/vmware.md
+      - Display & Graphics:
+        - configuration/display-graphics/README.md
+        - Mesa Configuration: configuration/display-graphics/mesa3d.md
+        - Hardware-specifics quirks:
+          - Intel GPUs: configuration/display-graphics/intel.md
+          - AMD GPUs: configuration/display-graphics/amd-radeon.md
+          - Nvidia GPUs: configuration/display-graphics/nvidia.md
+          - VirGL: configuration/display-graphics/virtio.md
+          - VMWare SVGA: configuration/display-graphics/vmware.md
       - Media codecs: configuration/media-codecs.md
       - Sensors: configuration/sensors.md
       - Touchscreen:
