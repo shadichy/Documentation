@@ -15,7 +15,12 @@ You'll need these following:
 - A bootloader/boot manager that supports booting sparse images (both kernel & initrd)
 
 !!! Warning
-	
+	A sparse image is a file that has been created by using the `dd` command with the `conv=notrunc` option. A bootable sparse image is a kernel or initrd image created using the same technique.
+
+	Most bootloaders prohibit booting sparse images, or unknown capability.
+	As for now, known sparse-supported bootloaders are: [GRUB](https://www.gnu.org/software/grub/) (works with non-CoW filesystems), [RefindPlus](https://github.com/RefindPlusRepo/RefindPlus) (this one is not recommended due to stability issues).
+	Unsupported (tested) bootloaders: [rEFInd](https://www.rodsbooks.com/refind/).
+	Unplanned/Rejected: [limine](https://github.com/limine-bootloader/limine)
 
 - A BlissOS .iso image (duh)
 
@@ -67,49 +72,52 @@ In this mode, your BlissOS can be updated using internal updater (OTA-ready) or 
 !!!info "Did you know ?"
 	You can setup proper AB-mode into an empty partition using our [bootable installer](../auto/bootable-installer.md) ! When choosing Bootloaders, just pick [None](../auto/bootable-installer.md#select-bootloader).
 
-First, copy the files from BlissOS .iso to where you want to put BlissOS in, rename `ramdisk-recovery.img` to `recovery.img`.
+The rootfs must contain 2 replicas of each file with exact same sizes:
+- `kernel` -> `kernel_a` and `kernel_b`
+- `initrd.img` -> `initrd_a.img` and `initrd_b.img`
+- `system.img` (inside `system.efs` or `system.sfs`) -> `system_a.img` and `system_b.img`
+- `ramdisk-recovery.img` -> `recovery_a.img` and `recovery_b.img`
 
-Then, unpack the `system.efs` (or `system.sfs`) by using `mount` to get the `system.img`.
+This is due to OTA update method requires 2 slots (AB), one for booting and one for flashing next update's OTA image. In case the update fails, it will fallback to the other (current) slot.
 
-For example
-``` sh
+!!!info
+	As of "why should the replicas have the same sizes?", it's because OTA updates by writing a payload to preexisting block devices, not writing files. The "replica" block devices are not allowed to have different sizes than the original. But no update has the same size as the other, so we must define a "ceiling" value for the size, so newer updates have space to grow.
+
+There are 2 ways:
+1. Rename the files with adding suffix `_a`, then create the replicas with the suffix `_b`, with the size of the ceiling value, then calculate the difference in size between the 2 files and grow the original files to the ceiling.
+2. Create empty containers for both `_a` and `_b` files, then clone the original files into the `_a` containers.
+
+This is the 2nd way.
+Do as following:
+```sh
+# create empty containers for files
+# kernels and initrds would require <= 20MB, setting 20MB as ceiling should be enough
+# system.img is about ~4.8GB, ceil=5GB
+# recovery.img is < 40MB, ceil=40MB
+dd if=/dev/zero of=kernel_a bs=1M count=0 seek=20
+dd if=/dev/zero of=kernel_b bs=1M count=0 seek=20
+dd if=/dev/zero of=initrd_a.img bs=1M count=0 seek=20
+dd if=/dev/zero of=initrd_b.img bs=1M count=0 seek=20
+dd if=/dev/zero of=system_a.img bs=1G count=0 seek=5
+dd if=/dev/zero of=system_b.img bs=1G count=0 seek=5
+dd if=/dev/zero of=recovery_a.img bs=1M count=0 seek=40
+dd if=/dev/zero of=recovery_b.img bs=1M count=0 seek=40
+
+# mount system.efs/system.sfs
 mkdir out
-sudo mount system.efs out
-cp out/system.img system.img
+sudo mount system.?fs out
+
+# clone files
+dd if=kernel of=kernel_a conv=notrunc
+dd if=initrd.img of=initrd_a.img conv=notrunc
+dd if=out/system.img of=system_a.img conv=notrunc # retry with `sudo` if needed
+dd if=ramdisk-recovery.img of=recovery_a.img conv=notrunc
+
+# unmount system.efs/system.sfs
 sudo umount out && rm -rf out
-```
-!!!info 
-	You can use other programs to extract, just get `system.img` out in the end.
 
-Once extracted, remove the `system.efs` (or `system.sfs`) file.
-
-Next, rename the files by appending `_a` as a postfix to the file names and before the file extension (`kernel` -> `kernel_a`, `initrd.img` -> `initrd_a.img`,...). This will be the slot A of your BlissOS.
-
-!!!warning
-
-	The size of files in slot A must be equal to the size of files in slot B. But with each update, the payload size may differs. To solve this, we can use `dd` to append empty data to slot A to scale it up to the same size as slot B.
-
-Following that, define the upper size for each of files in slot A, and create slot B files with the defined upper sizes using `dd` in the same directory as slot A.
-
-We will use `system.img` as an example, do the same for the rest of the images:
-```sh
-# Create system_b.img, upper size is 5GB
-dd if=/dev/zero of=system_b.img bs=1G count=5
-# ... applies to other files, note that they 
-# should be way smaller, you don't want to have
-# 5gb of initrd :).
-```
-
-And then scale the slot A files to the upper size using `dd` with `conv=notrunc`.
-
-```sh
-# Get the size of system_a.img in MB
-size=$(du -B 1M system_a.img | cut -f1)
-# > 4679
-# Since 5GB is 5120MB, we subtract 5120MB from the size of system_a.img (4679MB) and get 139MB.
-# Append 139MB empty data to system_a.img
-dd if=/dev/zero of=system_a.img bs=1M count=$((5120 - size)) conv=notrunc
-# ... applies to other files
+# delete original files
+rm kernel initrd.img system.efs/system.sfs ramdisk-recovery.img
 ```
 
 #### Misc image
