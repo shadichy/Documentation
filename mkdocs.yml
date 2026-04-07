@@ -24,6 +24,7 @@ theme:
     annotation: material/plus-circle
   features:
     - navigation.indexes
+    - navigation.instant.preview
     - navigation.tabs
     - navigation.top
     - navigation.path
