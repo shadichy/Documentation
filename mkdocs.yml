@@ -1,6 +1,7 @@
 site_name: Bliss OS Documentation
 repo_name: BlissOS/Documentation
 repo_url: https://github.com/BlissRoms-x86/Documentation
+site_url: https://docs.blissos.org
 theme:
   name: material
   favicon: assets/images/favicon.png
@@ -122,3 +123,9 @@ plugins:
   - glightbox
   - search
   - table-reader
+  - social:
+      cards_layout_options:
+        font_family: Google Sans Flex
+        background_color: "#18001a"
+        logo: assets_main/.icons/blissos.svg
+        title: "Bliss OS Documentation"

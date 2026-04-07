@@ -24,5 +24,6 @@ jobs:
           path: ~/.cache 
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-table-reader-plugin
+      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-table-reader-plugin "mkdocs-material[imaging]"
+      - run: sudo apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev pngquant -y
       - run: mkdocs gh-deploy --force
