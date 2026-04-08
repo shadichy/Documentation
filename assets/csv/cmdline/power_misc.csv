@@ -1,0 +1,4 @@
+Name,Type,Values,Description,Notes
+`SLEEP_STATE`,variable,"`mem` (default), `standby`, `freeze`, `disk`",Set default sleep state. Unset to use default (`mem`)., 
+`POWER_NONBOOT_CPU_OFF`,variable,`1`,Turn off non-boot CPUs when suspend. Unset to disable., No need to set `intel_idle.max_cstate` if using this.
+`intel_idle.max_cstate`,variable,number (1~8),Force max cstate level for Intel CPUs. Unset to disable.,More info can be found on [intel_idle driver document](https://docs.kernel.org/admin-guide/pm/intel_idle.html#kernel-command-line-options-and-module-parameters). Recommend `2` for some Intel Atom SoCs. Does not work on AMD CPUs. 

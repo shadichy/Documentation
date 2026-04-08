@@ -1,0 +1,9 @@
+﻿Name/Features,Using userdata partition,Using data.img,Using directory as userdata,Using userdata on ramdisk
+Save your data,✅ Yes,✅ Yes,✅ Yes,🚫 No
+Supported on installation,✅ Yes,✅ Yes,✅ Yes,🚫 No (Live Mode only)
+Portable,🚫 No,✅ Yes,🚫 No,🚫 No
+Supported by [vold](https://source.android.com/docs/core/storage/config),✅ Yes,✅ Yes,🚫 No,✅ Yes
+"Can be able to use [File-based Encryption](https://source.android.com/docs/security/features/encryption/file-based) (planning, not available yet)",✅ Yes,✅ Yes,🚫 No,🚫 No
+"Supports ""Apply from Sdcard"" in [Recovery Mode](../configuration/recovery.md)",🚫 No,🚫 No,✅ Yes,🚫 No
+Supports loading `modules.blocklist` & `modules.options`,🚫 No,🚫 No,✅ Yes,🚫 No
+Filesystems supported,"`ext4`,`btrfs`,`f2fs`","`ext4` (data.img can be used on `ntfs`, `fat32` or `exfat` partitions)","`ext4`,`btrfs`,`f2fs`",`tmpfs`

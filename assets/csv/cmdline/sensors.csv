@@ -1,0 +1,5 @@
+Name,Type,Values,Description,Notes
+`SENSORS_FORCE_KBDSENSOR`,variable,`1`,Force use `kbd` sensors for keyboard control. Unset to disable., 
+`SET_SF_ROTATION`,variable,`true`,Enable/Disable surfaceflinger hardware rotation., 
+`SET_OVERRIDE_FORCED_ORIENT`,variable,`true`,Enable/Disable forced orientation., 
+`SENSORS_DELAY_INIT`,variable,number,Delay sensors load by seconds. Unset to disable.,Recommended for tablets that uses sensors driver which uses`iio` .

@@ -1,0 +1,4 @@
+Name,Type,Values,Description,Notes
+`SET_FAKE_BATTERY_LEVEL`,variable,number,Set fake battery level. Unset to disable., 
+`SET_FAKE_CHARGING_STATUS`,variable,`1`,Set fake charging status. Unset to disable., 
+`androidboot.fake_battery`,variable,`1`,Set fake battery information by AOSP. Unset to disable.,"You can check [BatteryMonitor.cpp](https://cs.android.com/android/platform/superproject/+/android-latest-release:system/core/healthd/BatteryMonitor.cpp), search for `ro.boot.fake_battery` to know which value they are trying to fake. <br>As of 30/08/2025, the value is 42% battery at 42.4°C"

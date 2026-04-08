@@ -1,0 +1,3259 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.blissos.org/knowledgebase/graphics-explain/">
+      
+      
+        <link rel="prev" href="../difference-with-blissroms/">
+      
+      
+        <link rel="next" href="../pseudo-filesystem-table/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Graphics options explanation - Bliss OS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Flex:300,300i,400,400i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans Flex";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="Graphics options explanation - Bliss OS Documentation">
+<meta property="og:image" content="https://docs.blissos.org/assets/images/social/knowledgebase/graphics-explain.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://docs.blissos.org/knowledgebase/graphics-explain/">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Graphics options explanation - Bliss OS Documentation">
+<meta property="twitter:image" content="https://docs.blissos.org/assets/images/social/knowledgebase/graphics-explain.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="blisslight" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#explanation-for-blissos-graphics-options" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bliss OS Documentation" class="md-header__button md-logo" aria-label="Bliss OS Documentation" data-md-component="logo">
+      
+  
+  <svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M620.11 1080C783.12 1060.3 936.552 983.953 1047.53 852.878C1158.5 721.802 1207.72 558.791 1198.99 396.27C1035.98 415.967 882.55 492.315 771.574 623.391C660.599 754.467 611.377 917.477 620.11 1080Z"></path>
+<path d="M620.11 1080C783.12 1060.3 936.552 983.953 1047.53 852.878C1158.5 721.802 1207.72 558.791 1198.99 396.27C1035.98 415.967 882.55 492.315 771.574 623.391C660.599 754.467 611.377 917.477 620.11 1080Z"></path>
+<path d="M579.866 1080C588.6 917.478 539.378 754.468 428.403 623.392C317.427 492.316 163.995 415.968 0.985436 396.271C-7.74802 558.792 41.4737 721.803 152.449 852.879C263.425 983.954 416.857 1060.3 579.866 1080Z"></path>
+<path d="M579.866 1080C588.6 917.478 539.378 754.468 428.403 623.392C317.427 492.316 163.995 415.968 0.985436 396.271C-7.74802 558.792 41.4737 721.803 152.449 852.879C263.425 983.954 416.857 1060.3 579.866 1080Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M716.125 347.177C686.413 286.02 647.237 229.748 600.35 180C553.334 229.884 514.072 286.329 484.33 347.68C530.051 394.887 569.216 448.958 599.984 509.128C630.86 448.744 670.195 394.503 716.125 347.177Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M716.125 347.177C686.413 286.02 647.237 229.748 600.35 180C553.334 229.884 514.072 286.329 484.33 347.68C530.051 394.887 569.216 448.958 599.984 509.128C630.86 448.744 670.195 394.503 716.125 347.177Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M229.895 432.306C236.675 364.596 254.087 298.269 281.045 235.477C411.845 301.39 519.849 407.215 583.489 543.713C577.759 556.7 572.408 569.944 567.452 583.44C550.438 629.768 538.895 676.838 532.509 724.002C510.272 681.959 483.231 641.724 451.298 604.007C388.577 529.926 312.948 472.607 229.895 432.306Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M229.895 432.306C236.675 364.596 254.087 298.269 281.045 235.477C411.845 301.39 519.849 407.215 583.489 543.713C577.759 556.7 572.408 569.944 567.452 583.44C550.438 629.768 538.895 676.838 532.509 724.002C510.272 681.959 483.231 641.724 451.298 604.007C388.577 529.926 312.948 472.607 229.895 432.306Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M970.071 432.31C963.291 364.598 945.878 298.27 918.92 235.477C772.539 309.242 654.708 432.994 595.659 593.782C573.522 654.06 561.089 715.614 557.584 776.906C577.124 823.29 591.223 871.401 599.987 920.369C620.34 806.662 669.451 697.582 748.677 604.006C811.396 529.928 887.021 472.61 970.071 432.31Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M970.071 432.31C963.291 364.598 945.878 298.27 918.92 235.477C772.539 309.242 654.708 432.994 595.659 593.782C573.522 654.06 561.089 715.614 557.584 776.906C577.124 823.29 591.223 871.401 599.987 920.369C620.34 806.662 669.451 697.582 748.677 604.006C811.396 529.928 887.021 472.61 970.071 432.31Z"></path>
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bliss OS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Graphics options explanation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="blisslight" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/BlissRoms-x86/Documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    BlissOS/Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+    
+  
+  Main Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installation/" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.03c4.73.47 8.5 4.22 8.95 8.97A9.976 9.976 0 0 1 13 21.93v-2c3.64-.43 6.5-3.32 6.96-6.96A7.994 7.994 0 0 0 13 4.05V2.03m-2 .03v2c-1.43.2-2.78.78-3.9 1.68L5.67 4.26A9.83 9.83 0 0 1 11 2.06M4.26 5.67 5.69 7.1A8 8 0 0 0 4.05 11h-2c.2-1.96.95-3.81 2.21-5.33M2.06 13h2c.18 1.42.75 2.77 1.63 3.9l-1.42 1.43A10.04 10.04 0 0 1 2.06 13m5.04 5.37c1.13.88 2.48 1.45 3.9 1.63v2c-1.96-.21-3.82-1-5.33-2.26zM12 16.5 7.5 12H11V8h2v4h3.5z"></path></svg>
+    
+  
+  Installation guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../configuration/" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224q.347.171.668.386c.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63q.406.578.704 1.218c.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294q.024.386 0 .772c-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a8 8 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a6 6 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8 8 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a6 6 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8 8 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6 6 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a8 8 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071q.321-.215.668-.386c.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03Q7.646 0 8 0m-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189q-.26.13-.5.29c-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045q-.33.47-.573.99c-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a5 5 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19q.243.52.573.989c.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27q.242.16.501.29c.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189q.26-.13.5-.29c.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045q.33-.47.573-.99c.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a5 5 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.5 6.5 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.4 4.4 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8"></path></svg>
+    
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"></path></svg>
+    
+  
+  Knowledgebase
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"></path></svg>
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../feedback/" class="md-tabs__link">
+          
+  
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6c0-.55-.45-1-1-1H5.82l.68-3.18v-.23c0-.31-.13-.59-.33-.8L5.38 0 .44 4.94C.17 5.21 0 5.59 0 6v6.5c0 .83.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.91l2.26-5.29c.07-.17.11-.36.11-.55zm-2 1.13L7.92 12H2V6.21l1.93-1.93L3.36 7H10zM22.5 10h-6.75c-.62 0-1.15.38-1.38.91l-2.26 5.29c-.07.17-.11.36-.11.55V18c0 .55.45 1 1 1h5.18l-.68 3.18v.24c0 .31.13.58.33.8l.79.78 4.94-4.94c.27-.27.44-.65.44-1.06v-6.5c0-.83-.67-1.5-1.5-1.5m-.5 7.79-1.93 1.93.57-2.72H14v-.13L16.08 12H22z"></path></svg>
+    
+  
+  Feedback
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Frequently Asked Questions (FAQs)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../CODE_OF_CONDUCT/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Code of Conduct
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bliss OS Documentation" class="md-nav__button md-logo" aria-label="Bliss OS Documentation" data-md-component="logo">
+      
+  
+  <svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M620.11 1080C783.12 1060.3 936.552 983.953 1047.53 852.878C1158.5 721.802 1207.72 558.791 1198.99 396.27C1035.98 415.967 882.55 492.315 771.574 623.391C660.599 754.467 611.377 917.477 620.11 1080Z"></path>
+<path d="M620.11 1080C783.12 1060.3 936.552 983.953 1047.53 852.878C1158.5 721.802 1207.72 558.791 1198.99 396.27C1035.98 415.967 882.55 492.315 771.574 623.391C660.599 754.467 611.377 917.477 620.11 1080Z"></path>
+<path d="M579.866 1080C588.6 917.478 539.378 754.468 428.403 623.392C317.427 492.316 163.995 415.968 0.985436 396.271C-7.74802 558.792 41.4737 721.803 152.449 852.879C263.425 983.954 416.857 1060.3 579.866 1080Z"></path>
+<path d="M579.866 1080C588.6 917.478 539.378 754.468 428.403 623.392C317.427 492.316 163.995 415.968 0.985436 396.271C-7.74802 558.792 41.4737 721.803 152.449 852.879C263.425 983.954 416.857 1060.3 579.866 1080Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M716.125 347.177C686.413 286.02 647.237 229.748 600.35 180C553.334 229.884 514.072 286.329 484.33 347.68C530.051 394.887 569.216 448.958 599.984 509.128C630.86 448.744 670.195 394.503 716.125 347.177Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M716.125 347.177C686.413 286.02 647.237 229.748 600.35 180C553.334 229.884 514.072 286.329 484.33 347.68C530.051 394.887 569.216 448.958 599.984 509.128C630.86 448.744 670.195 394.503 716.125 347.177Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M229.895 432.306C236.675 364.596 254.087 298.269 281.045 235.477C411.845 301.39 519.849 407.215 583.489 543.713C577.759 556.7 572.408 569.944 567.452 583.44C550.438 629.768 538.895 676.838 532.509 724.002C510.272 681.959 483.231 641.724 451.298 604.007C388.577 529.926 312.948 472.607 229.895 432.306Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M229.895 432.306C236.675 364.596 254.087 298.269 281.045 235.477C411.845 301.39 519.849 407.215 583.489 543.713C577.759 556.7 572.408 569.944 567.452 583.44C550.438 629.768 538.895 676.838 532.509 724.002C510.272 681.959 483.231 641.724 451.298 604.007C388.577 529.926 312.948 472.607 229.895 432.306Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M970.071 432.31C963.291 364.598 945.878 298.27 918.92 235.477C772.539 309.242 654.708 432.994 595.659 593.782C573.522 654.06 561.089 715.614 557.584 776.906C577.124 823.29 591.223 871.401 599.987 920.369C620.34 806.662 669.451 697.582 748.677 604.006C811.396 529.928 887.021 472.61 970.071 432.31Z"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M970.071 432.31C963.291 364.598 945.878 298.27 918.92 235.477C772.539 309.242 654.708 432.994 595.659 593.782C573.522 654.06 561.089 715.614 557.584 776.906C577.124 823.29 591.223 871.401 599.987 920.369C620.34 806.662 669.451 697.582 748.677 604.006C811.396 529.928 887.021 472.61 970.071 432.31Z"></path>
+</svg>
+
+    </a>
+    Bliss OS Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/BlissRoms-x86/Documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    BlissOS/Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Main Page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../installation/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.03c4.73.47 8.5 4.22 8.95 8.97A9.976 9.976 0 0 1 13 21.93v-2c3.64-.43 6.5-3.32 6.96-6.96A7.994 7.994 0 0 0 13 4.05V2.03m-2 .03v2c-1.43.2-2.78.78-3.9 1.68L5.67 4.26A9.83 9.83 0 0 1 11 2.06M4.26 5.67 5.69 7.1A8 8 0 0 0 4.05 11h-2c.2-1.96.95-3.81 2.21-5.33M2.06 13h2c.18 1.42.75 2.77 1.63 3.9l-1.42 1.43A10.04 10.04 0 0 1 2.06 13m5.04 5.37c1.13.88 2.48 1.45 3.9 1.63v2c-1.96-.21-3.82-1-5.33-2.26zM12 16.5 7.5 12H11V8h2v4h3.5z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation guide
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatic with Installers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automatic with Installers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/auto/bootable-installer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootable Installer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/manual/the-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/manual/setup-linux-grub2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Linux's GRUB2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install on a Virtual Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../configuration/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224q.347.171.668.386c.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63q.406.578.704 1.218c.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294q.024.386 0 .772c-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a8 8 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a6 6 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8 8 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a6 6 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8 8 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6 6 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a8 8 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071q.321-.215.668-.386c.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03Q7.646 0 8 0m-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189q-.26.13-.5.29c-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045q-.33.47-.573.99c-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a5 5 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19q.243.52.573.989c.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27q.242.16.501.29c.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189q.26-.13.5-.29c.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045q.33-.47.573-.99c.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a5 5 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.5 6.5 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.4 4.4 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../configuration/display-graphics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display &amp; Graphics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Display &amp; Graphics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/display-graphics/mesa3d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesa Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware-specifics quirks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware-specifics quirks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/display-graphics/intel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intel GPUs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/display-graphics/amd-radeon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMD GPUs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/display-graphics/nvidia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nvidia GPUs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/display-graphics/virtio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VirGL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/display-graphics/vmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VMWare SVGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/media-codecs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media codecs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Touchscreen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Touchscreen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/touchscreens/calibrate-configure-iptsd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrate and configure iptsd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/touchscreens/calibrate-configure-silead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrate and configure silead touchscreens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/grantsu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grant superuser permission or debug shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/vm-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing a Virtual Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/pseudo-filesystem-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pseudo fstab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/kernel-parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup kernel's cmdline parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/recovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recovery Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/arm-keymapper-hack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Making Panda/Mantis keymapper work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledgebase
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledgebase
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware-requirement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../other-bliss-variant/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Different BlissOS variants
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Different BlissOS variants
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other-bliss-variant/go-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BlissOS Go
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other-bliss-variant/surface-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BlissOS for Surface devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other-bliss-variant/zenith-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BlissOS Zenith
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../difference-with-blissroms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Difference with BlissRoms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphics options explanation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphics options explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#egl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EGL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gralloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GRALLOC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GRALLOC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gbm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gbm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minigbm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minigbm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gralloc4_minigbm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GRALLOC4_MINIGBM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hwc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HWC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hwc_hidl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWC_HIDL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulkan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VULKAN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force_gles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORCE_GLES
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hwaccel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HWACCEL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force_renderengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORCE_RENDERENGINE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FORCE_RENDERENGINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesa_llvmpipe-and-mesa_zink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MESA_LLVMPIPE and MESA_ZINK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MESA_LLVMPIPE and MESA_ZINK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesa_llvmpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MESA_LLVMPIPE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesa_zink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MESA_ZINK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pseudo-filesystem-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pseudo filesystem table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../userdata-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Userdata options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernel-parameters-cheat-sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BlissOS' kernel parameters cheat sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compatibility List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../development/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/maintaining-proper-authorship/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintaining Proper Authorship
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/obatain-source-and-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obtain the Source Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/porting-linux-drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Porting Linux Drivers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/contribute-to-the-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribute to the Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../feedback/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6c0-.55-.45-1-1-1H5.82l.68-3.18v-.23c0-.31-.13-.59-.33-.8L5.38 0 .44 4.94C.17 5.21 0 5.59 0 6v6.5c0 .83.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.91l2.26-5.29c.07-.17.11-.36.11-.55zm-2 1.13L7.92 12H2V6.21l1.93-1.93L3.36 7H10zM22.5 10h-6.75c-.62 0-1.15.38-1.38.91l-2.26 5.29c-.07.17-.11.36-.11.55V18c0 .55.45 1 1 1h5.18l-.68 3.18v.24c0 .31.13.58.33.8l.79.78 4.94-4.94c.27-.27.44-.65.44-1.06v-6.5c0-.83-.67-1.5-1.5-1.5m-.5 7.79-1.93 1.93.57-2.72H14v-.13L16.08 12H22z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Feedback
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/github-issue/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/messaging/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 .5a7.5 7.5 0 0 1 7.499 7.462l.002.038v1.164a2.612 2.612 0 0 1-4.783 1.454A3.76 3.76 0 0 1 8 11.776 3.776 3.776 0 1 1 11.776 8v1.164a1.112 1.112 0 0 0 2.225 0L14 8a6 6 0 1 0-3.311 5.365.75.75 0 0 1 .673 1.341A7.5 7.5 0 1 1 8 .5m0 5.225a2.275 2.275 0 1 0 0 4.552 2.275 2.275 0 0 0 0-4.552"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Messaging Platforms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/xda/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.84 3.052V0h7.843v17.583H13.84v-3.024h4.591V3.052zM5.569 14.53V3.024h4.592V0H2.318v17.583H6.98L10.16 24v-9.483z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    XDA Threads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.76 2.76 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6 6 0 0 0-.26.16 1 1 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1 1 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.61.61 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1 1 0 0 0-.34.398M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently Asked Questions (FAQs)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.048 2.241c.964-.709 2.079-1.238 3.325-1.241a4.62 4.62 0 0 1 3.282 1.355c.41.408.757.86.996 1.428.238.568.348 1.206.347 1.968 0 2.193-1.505 4.254-3.081 5.862-1.496 1.526-3.213 2.796-4.249 3.563l-.22.163a.75.75 0 0 1-.895 0l-.221-.163c-1.036-.767-2.753-2.037-4.249-3.563C1.51 10.008.007 7.952.002 5.762a4.61 4.61 0 0 1 1.353-3.407C3.123.585 6.223.537 8.048 2.24Zm-1.153.983c-1.25-1.033-3.321-.967-4.48.191a3.12 3.12 0 0 0-.913 2.335c0 1.556 1.109 3.24 2.652 4.813C5.463 11.898 6.96 13.032 8 13.805c.353-.262.758-.565 1.191-.905l-1.326-1.223a.75.75 0 0 1 1.018-1.102l1.48 1.366c.328-.281.659-.577.984-.887L9.99 9.802a.75.75 0 1 1 1.019-1.103l1.384 1.28q.443-.494.81-.995L12.92 8.7l-1.167-1.168c-.674-.671-1.78-.664-2.474.03q-.404.405-.802.797c-.893.882-2.319.843-3.185-.032q-.518-.524-1.043-1.047a.75.75 0 0 1-.04-1.016q.244-.288.52-.623c.62-.748 1.356-1.637 2.166-2.417m7.112 4.442c.313-.65.491-1.293.491-1.916v-.001c0-.614-.088-1.045-.23-1.385-.143-.339-.357-.633-.673-.949a3.1 3.1 0 0 0-2.218-.915c-1.092.003-2.165.627-3.226 1.602-.823.755-1.554 1.637-2.228 2.45l-.127.154.562.566a.755.755 0 0 0 1.066.02l.794-.79c1.258-1.258 3.312-1.31 4.594-.032.396.394.792.791 1.173 1.173Z"></path></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Code of Conduct
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Main Page
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Knowledgebase
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="explanation-for-blissos-graphics-options">Explanation for BlissOS' graphics options</h1>
+<p>BlissOS inherits its core graphics stack implementation from the Android-x86 project. To ensure broad compatibility across the x86 ecosystem, several graphics initialization modes are available during boot. This section details the purpose of each graphics option and documents the specific values they accept.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All of the options listed below are <strong>kernel parameters</strong>. If you are unsure how to apply them, please refer to our guide on <a href="../../configuration/kernel-parameters/">Setting up kernel command-line parameters</a>.</p>
+</div>
+<h2 id="egl">EGL</h2>
+<div class="admonition info">
+<p class="admonition-title">What is EGL?</p>
+<p>According to <a href="https://en.wikipedia.org/wiki/EGL_(API)">Wikipedia</a>, "<em>EGL is an interface between Khronos rendering APIs (such as OpenGL, OpenGL ES or OpenVG) and the underlying native platform windowing system.</em>" Android uses EGL to handle graphics context management. For a deeper dive, check out the <a href="https://source.android.com/docs/core/graphics/arch-egl-opengl">Android Graphics Architecture</a> page.</p>
+</div>
+<p>The following <code>EGL</code> options are available in BlissOS to handle different graphics rendering paths:</p>
+<ul>
+<li>
+<p><strong><code>angle</code></strong>: Uses Google's <a href="https://github.com/google/angle">ANGLE</a> (Almost Native Graphics Layer Engine). This option translates OpenGL ES 2.0/3.0/3.1 calls into Vulkan commands. This mode requires a working <a href="#vulkan">Vulkan HAL</a> to function.</p>
+<ul>
+<li>BlissOS utilizes the built-in ANGLE provided by the upstream AOSP source.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>mesa</code></strong> <em>(Default)</em>: Uses <a href="https://docs.mesa3d.org/egl.html">Mesa3D's EGL</a>. Alongside <a href="https://gallium.readthedocs.io/en/latest/gallium/intro.html#what-is-gallium">Mesa3D's Gallium</a> drivers, this provides the standard hardware acceleration for supported GPUs, as well as software fallback options.</p>
+<ul>
+<li>BlissOS maintains a <a href="https://github.com/android-generic/external_mesa">custom Mesa fork</a> to ensure the best compatibility and performance for the specific hardware we support.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>swiftshader</code></strong>: Uses Google's <a href="https://github.com/google/swiftshader">SwiftShader</a>. This is a purely CPU-based software renderer for OpenGL ES.</p>
+<ul>
+<li><strong>Deprecated in BlissOS 16+ (Android 13+).</strong> Newer versions favor <code>SwANGLE</code> (SwiftShader + ANGLE), where ANGLE translates GLES to Vulkan, and SwiftShader runs the Vulkan implementation on the CPU.</li>
+</ul>
+</li>
+</ul>
+<h2 id="gralloc">GRALLOC</h2>
+<div class="admonition info">
+<p class="admonition-title">What is Gralloc?</p>
+<p><strong>Gralloc</strong> (Graphics Allocator) is the Android HAL module responsible for allocating graphics memory buffers. It acts as the middleman between the graphics drivers and the Android framework, deciding how memory is allocated for surfaces like app windows, video frames, and game rendering.</p>
+<p><strong>Read More:</strong></p>
+<ul>
+<li><a href="https://source.android.com/docs/core/graphics">Android Graphics Architecture (Official AOSP)</a> - A high-level overview of how surfaces and buffers work.</li>
+<li><a href="https://source.android.com/docs/core/graphics/arch-bq-gralloc">BufferQueue and Gralloc</a> - Technical details on the Gralloc interface.</li>
+</ul>
+</div>
+<p>BlissOS includes two primary Gralloc implementations, with several specific forks to handle the wide variety of PC hardware and specific driver quirks. The system automatically selects the best default based on your GPU, but these can be manually overridden.</p>
+<h3 id="gbm">gbm</h3>
+<p>This is the <a href="https://github.com/robherring/gbm_gralloc">gbm_gralloc</a> implementation. BlissOS maintains a fork of this project at <a href="https://github.com/android-generic/external_gbm_gralloc">android-generic/external_gbm_gralloc</a>.</p>
+<ul>
+<li><strong><code>gbm</code></strong>: The standard <code>gbm_gralloc</code>. It uses the Mesa3d's libgbm API to allocate buffers.</li>
+<li><strong><code>gbm_hack</code></strong>: A modified version containing a specific workaround: <a href="https://github.com/android-generic/external_gbm_gralloc/commit/e70acfc3f5acc64168a172987f34d141e55f6b54"><em>"HACK: Use pixel stride instead of width as gbm-&gt;map() argument"</em></a>. This was historically used to fix broken graphics rendering on Mesa's <code>iris</code> (Intel) or <code>nouveau</code> (Nvidia) drivers before better solutions were found.</li>
+<li><strong><code>gbm_noscanout</code></strong>: A version with the "scanout" code path removed. By removing the ability for Gralloc to send buffers directly to the display, it forces the Hardware Composer (HWC) to handle the rendering instead.<ul>
+<li>This was a workaround for <code>iris</code> driver issues before the <code>gbm_hack</code> solution was implemented.</li>
+</ul>
+</li>
+</ul>
+<h3 id="minigbm">minigbm</h3>
+<p><a href="https://android.googlesource.com/platform/external/minigbm/">Minigbm</a> is a lightweight graphics buffer allocator originally developed for ChromeOS. BlissOS maintains a fork at <a href="https://github.com/android-generic/external_minigbm">android-generic/external_minigbm</a>.</p>
+<ul>
+<li><strong><code>minigbm</code></strong>: The default Minigbm implementation. It supports a wide range of backends including <code>virtio_gpu</code>, <code>i915</code>, <code>xe</code>, <code>amdgpu</code>, <code>nouveau</code>, and <code>vmwgfx</code>.</li>
+<li><strong><code>minigbm_gbm_mesa</code></strong>: A specialized backend created by <a href="https://github.com/rsglobal">Roman Stratiienko</a>.<ul>
+<li>This effectively adapts <a href="#gbm">gbm_gralloc</a> to run <em>inside</em> Minigbm as a backend. It leverages Mesa3D's libgbm APIs directly, aiming for optimal allocation on any hardware Mesa supports.</li>
+</ul>
+</li>
+<li><strong><code>minigbm_arcvm</code></strong>: The specific Minigbm configuration used in ChromeOS's ARCVM (Android Runtime for Chrome Virtual Machine). This backend is designed specifically for virtualized environments. It is optimized to work with <code>virtio-gpu</code> to efficiently share graphics buffers between the host system and the Android guest VM.<ul>
+<li>By default BlissOS inside a virtual machine (QEMU/KVM) with virtio-gpu enabled will use this option.</li>
+</ul>
+</li>
+</ul>
+<h3 id="gralloc4_minigbm">GRALLOC4_MINIGBM</h3>
+<p>This is a specialized boot option that switches the version of the Gralloc and Mapper services used by the system.</p>
+<ul>
+<li><strong><code>GRALLOC4_MINIGBM=1</code></strong>: Forces the system to use the <strong>Gralloc 4.0</strong> and <strong>Mapper 4.0</strong> services provided by Minigbm, instead of the default Gralloc 2.0 / Mapper 2.0 implementation.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option <strong>must only</strong> be used when <code>GRALLOC</code> is set to a <code>minigbm</code> variant (e.g., <code>minigbm</code>, <code>minigbm_gbm_mesa</code>, etc.). </p>
+<p>Other allocators like <code>gbm_gralloc</code> do not support the service structure required for this mode. Enabling this flag with an incompatible allocator will likely result in a broken graphics stack or boot failure.</p>
+</div>
+<h2 id="hwc">HWC</h2>
+<div class="admonition info">
+<p class="admonition-title">What are HWC and Composer HIDL Services?</p>
+<p><strong>Hardware Composer (HWC):</strong> The HWC is a Hardware Abstraction Layer (HAL) that determines the most efficient way to composite buffers (layers of graphics) on your screen. Instead of forcing the GPU to draw everything (which drains battery and impacts performance), the HWC offloads the composition of layers (like the status bar, apps, and navigation bar) directly to the display controller hardware. 
+<a href="https://source.android.com/docs/core/graphics/implement-hwc">Read more about HWC</a></p>
+<p><strong>Composer HIDL Service (HWC_HIDL):</strong> HIDL (Hardware Interface Definition Language) is the system Android uses to allow the core OS framework (like <code>SurfaceFlinger</code>) to communicate with hardware drivers. The "Composer HIDL Service" is the actual background daemon that hosts the HWC implementation and translates commands between the OS and the graphics stack.
+<a href="https://source.android.com/docs/core/architecture/hidl">Read more about HIDL</a></p>
+</div>
+<p>Just like <a href="#gralloc">GRALLOC</a>, BlissOS automatically selects the best <code>HWC</code> and <code>HWC_HIDL</code> configurations based on the detected hardware. However, these can be manually overridden using the boot parameters below.</p>
+<p>The <code>HWC=</code> parameter defines which Hardware Composer implementation to load.</p>
+<ul>
+<li><strong><code>default</code></strong>: Uses the standard, dummy fallback hwcomposer provided by AOSP.</li>
+<li><strong><code>drm*</code> variants</strong>: These use <code>drm_hwcomposer</code>, which utilizes standard Linux DRM/KMS APIs to handle display composition. BlissOS maintains a fork at <a href="https://github.com/android-generic/external_drm_hwcomposer">android-generic/external_drm_hwcomposer</a>. The <code>_celadon</code> suffixes pull from <a href="https://github.com/android-generic/external_drm_hwcomposer/tree/celadon">a specific branch</a> containing patches from Intel's <a href="https://github.com/projectceladon">Project Celadon</a>.<ul>
+<li><strong><code>drm</code></strong> / <strong><code>drm_celadon</code></strong>: The standard <code>drm_hwcomposer</code> implementations. <strong>These should be paired with <a href="#gbm">gbm_gralloc</a></strong>.</li>
+<li><strong><code>drm_minigbm</code></strong> / <strong><code>drm_minigbm_celadon</code></strong>: Uses <code>drm_hwcomposer</code> compiled with the legacy Minigbm <code>BufferInfoGetter</code>. This allows the composer to properly read the proprietary buffer metadata generated by Minigbm. <strong>Must be paired with <a href="#minigbm">minigbm</a>.</strong></li>
+<li><strong><code>drm_gbm_cros</code></strong> / <strong><code>drm_gbm_cros_celadon</code></strong>: Uses <code>drm_hwcomposer</code> with a legacy <code>gbm_gralloc</code> BufferInfo getter that mimics the ChromeOS (CrOS) API. <ul>
+<li><em>Context:</em> The BlissOS <code>gbm_gralloc</code> fork implements the <a href="https://github.com/BlissRoms-x86/gbm_gralloc/commit/1ad5fd5a226cc2c32103e351ecf2404aaa9216d2">CrOS API to retrieve buffer info</a>, and this HWC option utilizes an <a href="https://github.com/android-generic/external_drm_hwcomposer/commit/45a97c66aff45103959d2b55e05d89aec75b75dd">extra bufferinfo file</a> to read it. <strong>Must only be used by <a href="#gbm">gbm_gralloc</a>.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="hwc_hidl">HWC_HIDL</h3>
+<p>The <code>HWC_HIDL=</code> parameter specifies which version of the Composer HIDL service daemon should be used to host the chosen HWC implementation.</p>
+<ul>
+<li><strong><code>default-2.1</code></strong>: Uses the <code>android.hardware.graphics.composer@2.1-service</code>. <ul>
+<li>This is typically paired with <code>HWC=default</code> to handle software-rendering fallback environments (no hardware acceleration) or with <a href="#gbm">gbm_gralloc</a> when using the generic <a href="https://github.com/android-generic/external_drm_framebuffer">drm_framebuffer</a> wrapper.</li>
+</ul>
+</li>
+<li><strong><code>default-2.4</code></strong>: Uses the <code>android.hardware.graphics.composer@2.4-service</code>.<ul>
+<li>This is the modern service and should be used whenever <code>drm_hwcomposer</code> (<code>HWC=drm*</code>) is selected, as it supports newer display features.</li>
+</ul>
+</li>
+<li><strong><code>drmfb</code></strong>: Uses a custom <code>drmfb-composer</code> service (<code>android.hardware.graphics.composer@2.1-service.drmfb</code>) originally developed by <a href="https://github.com/me176c-dev/drmfb-composer">me176c-dev</a>.<ul>
+<li>This option should be used <em>without</em> specifying an <code>HWC=</code> parameter. It allows booting with <a href="#minigbm">minigbm</a> or <a href="#gbm">gbm_gralloc</a> by drawing directly to the Linux framebuffer, completely bypassing traditional hardware composition.</li>
+</ul>
+</li>
+</ul>
+<h2 id="vulkan">VULKAN</h2>
+<div class="admonition info">
+<p class="admonition-title">What is Vulkan?</p>
+<p><strong>Vulkan</strong> is a modern, cross-platform 3D graphics API designed to minimize CPU overhead and give developers more direct control over the GPU. Unlike OpenGL, which manages a lot of complexity for the developer, Vulkan is explicit, allowing for better performance in multi-core systems.</p>
+<p><strong>Read More:</strong></p>
+<ul>
+<li><a href="https://source.android.com/docs/core/graphics/arch-vulkan">Vulkan on Android (Official AOSP)</a></li>
+<li><a href="https://www.vulkan.org/">What is Vulkan? (Khronos Group)</a></li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">The History of VULKAN=1</p>
+<p>In the early days of Android-x86, the boot option <code>VULKAN=1</code> was used to force the system to switch from the legacy <a href="https://android.googlesource.com/platform/external/drm_gralloc/">drm_gralloc</a> (which did not support Vulkan) to <a href="#gbm">gbm_gralloc</a>.</p>
+<p>As development progressed, <a href="https://android.googlesource.com/platform/external/drm_gralloc/">drm_gralloc</a> was deprecated and removed, leaving <a href="#gbm">gbm_gralloc</a> and <a href="#minigbm">minigbm</a> as the standards—both of which support Vulkan out of the box. Consequently, the old <code>VULKAN=1</code> flag became obsolete.</p>
+<p><strong>However</strong>, BlissOS has recently reintroduced the <code>VULKAN=</code> option with a new purpose: <strong>switching between specific Vulkan HALs (drivers).</strong></p>
+</div>
+<p>Realistically, the correct Vulkan HAL is <strong>automatically selected</strong> based on your hardware. You should generally only use these options if you need to debug a specific issue or force a fallback.</p>
+<p>The <code>VULKAN=</code> parameter accepts the following values:</p>
+<p><strong>Hardware Drivers:</strong></p>
+<ul>
+<li><strong><code>intel</code></strong>: Loads the <a href="https://docs.mesa3d.org/drivers/anv.html">ANV</a> driver. This is the modern Mesa Vulkan driver for Intel GPUs (Skylake and newer).</li>
+<li><strong><code>intel_hasvk</code></strong>: Loads the <a href="https://www.phoronix.com/news/Intel-ANV-HASVK-Split-Merged">HasVK</a> driver. This is the legacy Mesa driver split off for older Intel architectures (Haswell, Broadwell).</li>
+<li><strong><code>radeon</code></strong>: Loads the <a href="https://docs.mesa3d.org/drivers/radv.html">RADV</a> driver. This is the standard, high-performance Vulkan driver for AMD Radeon GPUs.</li>
+<li><strong><code>nouveau</code></strong>: Loads the <a href="https://docs.mesa3d.org/drivers/nvk.html">NVK</a> driver for NVIDIA GPUs.</li>
+<li><strong><code>virtio</code></strong>: Loads the <a href="https://docs.mesa3d.org/drivers/venus.html">Venus</a> driver. This is for virtualized environments (QEMU/KVM) where the host passes Vulkan capabilities to the guest.</li>
+</ul>
+<p><strong>Software Rendering (CPU-based):</strong></p>
+<ul>
+<li><strong><code>pastel</code></strong>: Forces the use of <a href="https://github.com/google/swiftshader">SwiftShader</a> Vulkan.</li>
+<li><strong><code>lvp</code></strong>: Forces the use of <a href="https://docs.mesa3d.org/drivers/llvmpipe.html">LLVMpipe (Lavapipe)</a>. This is Mesa's CPU-based Vulkan implementation.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Recommendation</p>
+<p>For 99% of users, <strong>do not set a <code>VULKAN=</code> value.</strong> BlissOS's auto-detection logic mimics the behavior of standard Linux distributions to pick the best driver for your card. Use <code>pastel</code> or <code>lvp</code> only if your GPU is unsupported or crashing.</p>
+</div>
+<h2 id="force_gles">FORCE_GLES</h2>
+<div class="admonition info">
+<p class="admonition-title">What is OpenGL ES?</p>
+<p><strong>OpenGL ES</strong> (Embedded Systems) is a subset of the OpenGL graphics API designed specifically for mobile and embedded devices like smartphones. It is the primary API Android uses to render 3D graphics.</p>
+<p>Different apps require different versions of OpenGL ES to run. For example, a simple 2D game might only need <strong>ES 2.0</strong>, while a high-end 3D game might demand <strong>ES 3.2</strong> for advanced lighting and tessellation.</p>
+<p><strong>Read More:</strong></p>
+<ul>
+<li><a href="https://www.khronos.org/opengles/">OpenGL ES Overview (Khronos Group)</a></li>
+<li><a href="https://developer.android.com/guide/topics/graphics/opengl">Android OpenGL ES Guide</a></li>
+</ul>
+</div>
+<p>This boot option forces the system to report a specific OpenGL ES version to applications and the graphics driver. This is useful for testing compatibility or fooling older apps that might not recognize newer driver versions.</p>
+<ul>
+<li><strong><code>FORCE_GLES=&lt;version&gt;</code></strong>: Sets the reported OpenGL ES version.<ul>
+<li><strong>Supported Values:</strong> <code>2.0</code>, <code>3.0</code>, <code>3.1</code>, <code>3.2</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Default Behavior:</strong>
+If this option is not set, BlissOS defaults to reporting <strong>OpenGL ES 3.0</strong> (Internal value: <code>196608</code>).</p>
+<div class="admonition info">
+<p class="admonition-title">Technical Implementation</p>
+<p>When you set this option, the system modifies two key properties during boot:</p>
+<ol>
+<li><strong><code>ro.opengles.version</code></strong>: The Android system property that tells apps what the device supports (corresponds to <code>&lt;uses-feature&gt;</code> in an app's Manifest).</li>
+<li><strong><code>mesa.gles.version.override</code></strong>: Sets the <code>MESA_GLES_VERSION_OVERRIDE</code> environment variable, which forces the Mesa driver to technically report the chosen version, even if the hardware supports more (or less).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option Value</th>
+<th style="text-align: left;"><code>ro.opengles.version</code> (Integer)</th>
+<th style="text-align: left;"><code>ro.opengles.version</code> (Hex)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>2.0</strong></td>
+<td style="text-align: left;"><code>131072</code></td>
+<td style="text-align: left;"><code>0x00020000</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3.0</strong></td>
+<td style="text-align: left;"><code>196608</code></td>
+<td style="text-align: left;"><code>0x00030000</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3.1</strong></td>
+<td style="text-align: left;"><code>196609</code></td>
+<td style="text-align: left;"><code>0x00030001</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3.2</strong></td>
+<td style="text-align: left;"><code>196610</code></td>
+<td style="text-align: left;"><code>0x00030002</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="hwaccel">HWACCEL</h2>
+<p>This option controls the hardware acceleration state of the Android graphics stack.</p>
+<ul>
+<li><strong><code>HWACCEL=0</code></strong>: Disables hardware acceleration and forces the system to use software rendering.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Under the Hood</p>
+<p>When you set <code>HWACCEL=0</code>, the system overrides several other graphics options to ensure a stable software-only environment. Specifically, it configures the stack as follows:</p>
+<ul>
+<li><strong>Gralloc / HWC:</strong> Sets both to <code>default</code> (using the AOSP fallback implementations).</li>
+<li><strong>HWC Service:</strong> Sets <code>HWC_HIDL=default-2.1</code>.</li>
+<li><strong>Rendering:</strong> Sets <code>VULKAN=pastel</code> (SwiftShader) and <code>EGL=angle</code>.<ul>
+<li>This activates the <strong>SwANGLE</strong> software rendering path (ANGLE translating GLES to Vulkan, running on the SwiftShader CPU driver).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Difference from nomodeset</p>
+<p>It is common to confuse <code>HWACCEL=0</code> with the Linux kernel parameter <code>nomodeset</code>, but they function at different levels of the system:</p>
+<ul>
+<li>
+<p><strong><code>HWACCEL=0</code> (User Space):</strong> The kernel video drivers (like <code>i915</code> or <code>amdgpu</code>) <strong>still load</strong>, allowing for proper screen resolution and brightness control. However, Android is told to ignore the GPU for 3D rendering and compositing, doing all the work on the CPU instead.</p>
+<ul>
+<li><em>Use this if:</em> You have graphical glitches or artifacts but the system boots fine.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>nomodeset</code> (Kernel Space):</strong> This instructs the Linux kernel to <strong>not load</strong> video drivers at all. The system falls back to basic BIOS/UEFI display modes (often with wrong resolution and no brightness control).</p>
+<ul>
+<li><em>Use this if:</em> The system freezes or black screens <em>before</em> the Android boot animation appears.</li>
+<li>Read about nomodeset on <a href="https://wiki.archlinux.org/title/Kernel_mode_setting#Disabling_modesetting">ArchLinux Wiki</a> or <a href="https://docs.kernel.org/admin-guide/kernel-parameters.html">Linux Kernel Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="force_renderengine">FORCE_RENDERENGINE</h2>
+<div class="admonition info">
+<p class="admonition-title">What is RenderEngine?</p>
+<p><strong>RenderEngine</strong> in Android is a low-level component within SurfaceFlinger that draws layers, handles shadows, and composites graphics buffers, typically utilizing OpenGL ES or SkiaGL to render final images for the screen. </p>
+<p><strong>Read More:</strong></p>
+<ul>
+<li><a href="https://tm23forest.com/contents/android-surfaceflinger-renderengine-explained">tm23forest's Android surfaceflinger RenderEngine explained</a></li>
+</ul>
+</div>
+<p>This boot option forces SurfaceFlinger to use a specific graphics backend for its RenderEngine operations. It works by setting the system property <code>debug.renderengine.backend</code>.</p>
+<ul>
+<li><strong><code>FORCE_RENDERENGINE=&lt;value&gt;</code></strong>: overrides the default backend.</li>
+</ul>
+<h3 id="supported-values">Supported Values</h3>
+<p><strong>Modern Backends (<a href="https://skia.org/">Skia</a>):</strong></p>
+<ul>
+<li><strong><code>skiavk</code></strong>: Uses the <strong>Skia</strong> graphics library with a <strong>Vulkan</strong> backend (non-threaded).</li>
+<li><strong><code>skiavkthreaded</code></strong>: Uses the <strong>Skia</strong> graphics library with a <strong>Vulkan</strong> backend (threaded).<ul>
+<li><code>skiavk</code> &amp; <code>skiavkthreaded</code> were introduced in Android 14. This is the modern standard for devices with stable Vulkan drivers.</li>
+</ul>
+</li>
+<li><strong><code>skiagl</code></strong>: Uses the <strong>Skia</strong> graphics library with an <strong>OpenGL ES</strong> backend (non-threaded).</li>
+<li><strong><code>skiaglthreaded</code></strong>: Uses the <strong>Skia</strong> graphics library with an <strong>OpenGL ES</strong> backend (threaded).<ul>
+<li>Default for BlissOS 16+ (Android 13+).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Legacy Backends (GLES):</strong></p>
+<ul>
+<li><strong><code>threaded</code></strong>: Uses the legacy <strong>GLES</strong> implementation with threading enabled.<ul>
+<li>Default for BlissOS 14 &amp; 15 (Android 11/12).</li>
+</ul>
+</li>
+<li><strong><code>gles</code></strong>: Uses the legacy GLES implementation <em>without</em> threading.</li>
+</ul>
+<h2 id="mesa_llvmpipe-and-mesa_zink">MESA_LLVMPIPE and MESA_ZINK</h2>
+<p>These options allow you to force specific drivers within the Mesa3D stack.</p>
+<div class="admonition warning">
+<p class="admonition-title">Requirement</p>
+<p>These options <strong>must</strong> be used in conjunction with <code>EGL=mesa</code>. </p>
+<p>If you are using <code>EGL=angle</code> or <code>EGL=swiftshader</code>, these settings will be ignored.</p>
+</div>
+<h3 id="mesa_llvmpipe">MESA_LLVMPIPE</h3>
+<div class="admonition info">
+<p class="admonition-title">What is LLVMpipe?</p>
+<p><strong>LLVMpipe</strong> is a high-performance, CPU-based software rasterizer for OpenGL. It uses the LLVM compiler infrastructure to translate graphics commands into CPU instructions.</p>
+<p>In the Android ecosystem, its closest equivalent is <a href="https://github.com/google/swiftshader"><strong>SwiftShader</strong></a>. However, while SwiftShader is Google's implementation, LLVMpipe is the standard software fallback for Linux desktops. It is generally very accurate but CPU-intensive, making it a reliable choice for debugging when hardware acceleration fails.</p>
+<p><strong>Read More:</strong> <a href="https://docs.mesa3d.org/drivers/llvmpipe.html">Mesa3D LLVMpipe Driver</a></p>
+</div>
+<p>This option forces the system to use <strong>LLVMpipe</strong>, Mesa's software rasterizer, by setting the property <code>mesa.libgl.always.software=true</code>.</p>
+<ul>
+<li><strong><code>MESA_LLVMPIPE=1</code></strong>: Forces software rendering.</li>
+</ul>
+<h3 id="mesa_zink">MESA_ZINK</h3>
+<div class="admonition info">
+<p class="admonition-title">What is Zink?</p>
+<p><strong>Zink</strong> is a Mesa driver that implements OpenGL by translating everything into Vulkan commands. This allows devices with a working Vulkan driver (but a poor or missing OpenGL driver) to run full hardware-accelerated OpenGL.</p>
+<p>This concept is very similar to Google's <a href="https://github.com/google/angle"><strong>ANGLE</strong></a> project. You might want to use it as an alternative to ANGLE.</p>
+<p><strong>Read More:</strong> <a href="https://docs.mesa3d.org/drivers/zink.html">Mesa3D Zink Driver</a></p>
+</div>
+<p>This option forces the system to use <strong>Zink</strong>, Mesa's OpenGL-over-Vulkan implementation, by setting the property <code>mesa.loader.driver.override=zink</code>.</p>
+<ul>
+<li><strong><code>MESA_ZINK=1</code></strong>: Forces OpenGL commands to be translated into Vulkan commands.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013 - 2026 BlissLabs
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blissos.org/" target="_blank" rel="noopener" title="blissos.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M5.78 8.75a9.64 9.64 0 0 0 1.363 4.177q.383.64.857 1.215c.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a10 10 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.51 6.51 0 0 0 4.666 5.5q-.184-.271-.352-.552c-.715-1.192-1.437-2.874-1.581-4.948m-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948q.18-.295.353-.552a6.51 6.51 0 0 0-4.666 5.5m10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948q-.18.296-.353.552a6.51 6.51 0 0 0 4.666-5.5Zm2.733-1.5a6.51 6.51 0 0 0-4.666-5.5q.184.272.353.552c.714 1.192 1.436 2.874 1.58 4.948Z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/blissos_org" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://t.me/blissx86" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.com/invite/F9n5gbdNy2" target="_blank" rel="noopener" title="discord.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.instant.preview", "navigation.tabs", "navigation.top", "navigation.path", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

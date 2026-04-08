@@ -1,0 +1,3 @@
+Name,Type,Values,Description,Notes
+`SDCARDFS_DISABLE`,variable,`1`,Disable SDCardFS/ESDFS bind mounting. Unset to re-enable., 
+`INTERNAL_MOUNT`,variable,`1`,Mount all internal partitions. Unset to disable., 

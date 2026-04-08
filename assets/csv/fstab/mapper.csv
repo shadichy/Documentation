@@ -1,0 +1,15 @@
+﻿Identifier,Mapping target absolute path
+system_a,`/dev/block/by-name/system_a`
+system_b,`/dev/block/by-name/system_b`
+vendor_a,`/dev/block/by-name/vendor_a`
+vendor_b,`/dev/block/by-name/vendor_b`
+kernel_a,`/dev/block/by-name/kernel_a`
+kernel_b,`/dev/block/by-name/kernel_b`
+initrd_a,`/dev/block/by-name/initrd_a`
+initrd_b,`/dev/block/by-name/initrd_b`
+recovery_a,`/dev/block/by-name/recovery_a`
+recovery_b,`/dev/block/by-name/recovery_b`
+misc,`/dev/block/by-name/misc`
+bootloader,`/boot`
+esp,`/boot/efi`
+userdata,`/dev/block/by-name/userdata` (or `/data` if userdata is directory)

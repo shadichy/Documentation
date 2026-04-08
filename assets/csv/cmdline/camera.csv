@@ -1,0 +1,2 @@
+Name,Type,Values,Description,Notes
+`EMULATED_CAMERA`,variable,`1`,Enable emulated camera. Unset to disable., 
