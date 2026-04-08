@@ -18,7 +18,7 @@ You'll need these following:
 	A sparse image is a file that has been created by using the `dd` command with the `conv=notrunc` option. A bootable sparse image is a kernel or initrd image created using the same technique.
 
 	Most bootloaders prohibit booting sparse images, or unknown capability.
-	As for now, known sparse-supported bootloaders are: [GRUB](https://www.gnu.org/software/grub/) (works with non-CoW filesystems), [RefindPlus](https://github.com/RefindPlusRepo/RefindPlus) (this one is not recommended due to stability issues).
+	As for now, known sparse-supported bootloaders are: [GRUB](https://www.gnu.org/software/grub/) (works with non-CoW filesystems), [RefindPlus](https://github.com/RefindPlusRepo/RefindPlus).
 	Unsupported (tested) bootloaders: [rEFInd](https://www.rodsbooks.com/refind/).
 	Unplanned/Rejected: [limine](https://github.com/limine-bootloader/limine)
 
@@ -91,15 +91,16 @@ This is the 2nd way.
 Do as following:
 ```sh
 # create empty containers for files
-# kernels and initrds would require <= 20MB, setting 20MB as ceiling should be enough
-# system.img is about ~4.8GB, ceil=5GB
+# kernels would require <= 30MB, setting 20MB as ceiling should be enough
+# initrds would require <= 20MB, ceil=20MB
+# system.img is about ~4.8GB, ceil=6GB
 # recovery.img is < 40MB, ceil=40MB
-dd if=/dev/zero of=kernel_a bs=1M count=0 seek=20
-dd if=/dev/zero of=kernel_b bs=1M count=0 seek=20
+dd if=/dev/zero of=kernel_a bs=1M count=0 seek=30
+dd if=/dev/zero of=kernel_b bs=1M count=0 seek=30
 dd if=/dev/zero of=initrd_a.img bs=1M count=0 seek=20
 dd if=/dev/zero of=initrd_b.img bs=1M count=0 seek=20
-dd if=/dev/zero of=system_a.img bs=1G count=0 seek=5
-dd if=/dev/zero of=system_b.img bs=1G count=0 seek=5
+dd if=/dev/zero of=system_a.img bs=1G count=0 seek=6
+dd if=/dev/zero of=system_b.img bs=1G count=0 seek=6
 dd if=/dev/zero of=recovery_a.img bs=1M count=0 seek=40
 dd if=/dev/zero of=recovery_b.img bs=1M count=0 seek=40
 
